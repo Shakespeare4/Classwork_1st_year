@@ -1,0 +1,12 @@
+7 && -12.3 > -2.11 || 'a' == 'b'
+False
+SAT Fomula: Conjunto de condiciones y restricciones que tenes sobre librerías y versiones de tu proyecto.
+F = p & ((q v -r) & ((-p v r) & -q))         p q r s
+    0     0    1       1   0     1           0 0 0 0
+    0     0    0       1   1     1           0 0 1 0
+    0     1    1       1   0     0           0 1 0 0
+    0     1    0       1   1     0           0 1 1 0
+    1     0    1       0   0     1           1 0 0 0
+    1     0    0       0   1     1           1 0 1 0
+    1     1    1       0   0     0           1 1 0 0
+    1     1    0       0   1     0           1 1 1 0
