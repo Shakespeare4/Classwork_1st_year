@@ -38,7 +38,16 @@ public class Main {
         //int nombre&apellido; incorrecte, no pot tenir ampersand
         //int 0X1A; incorrecte, no pot començar per numero
         //int else; incorrecte, else es una paraula reservada
-
-
+        double primera = 0.5; //es correcte
+        double segunda = .5; //es correcte
+        double tercera = 9.3e12; //es correcte
+        //System.out.println(tercera * segunda); comprobacio matematica
+        double cuarta = 9.3e-12; //es correcte
+        int quinta = 12345678; //es correcte
+        // int sexta = 12345678_L; incorrecte, no pot tenir guions baixos si es esntre numeros
+        //double septima = 0.8E+0.8;  incorrecte, no pot sumar dos decimals
+        //double octava = 0.8E 8; incorrecte, no pot tenir espais
+        int novena = 05_15; //es correcte
+        //int decima = 018CDF; incorrecte, no pot mesclar numeros i lletres
     }
 }
