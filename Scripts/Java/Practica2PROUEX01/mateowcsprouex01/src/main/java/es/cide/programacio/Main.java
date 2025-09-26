@@ -24,6 +24,21 @@ public class Main {
         int Weight; // es correcte
         //int $$precioMínimo;es correcte, pero nomes perque el visual interve en la compilacio
         //int _$Único; es correcte, pero nomes perque el visual interve en la compilacio
-        //int tamaño_máximo; es correcte, pero nomes perque el visual interve en la compilacio
+        //int tamaño_màximo; es correcte, pero nomes perque el visual interve en la compilacio
+        //int peso.maximo; incorrecte, no pot tenir punts
+        int Precio__; //es correcte
+        //int matrícula?; incorrecte, no pot tenir interrogants
+        //int cuántoVale; es correcte, pero nomes perque el visual interve en la compilacio
+        int high; //es correcte
+        int barça; //es correcte, pero nomes perque el visual interve en la compilacio
+        int piragüista; //es correcte, pero nomes perque el visual interve en la compilacio
+        int B_011; //es correcte
+        int X012AB; //es correcte
+        //int 70libro; incorrecte, no pot començar per numero
+        //int nombre&apellido; incorrecte, no pot tenir ampersand
+        //int 0X1A; incorrecte, no pot començar per numero
+        //int else; incorrecte, else es una paraula reservada
+
+
     }
 }
