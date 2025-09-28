@@ -197,6 +197,269 @@ public class Main {
         System.out.println(cuadragesimasetima); //comprobacio
         
         //int cuadragesimaoctava =  0X12AG; incorrecte, un hexadecimal no pot contenir lletres diferents de A-F
+        
+        char alfa = 'a'; //es correcte
+
+        char beta = '$'; //es correcte
+
+        char gamma = '\n';  //es correcte
+        
+        //char delta = '/n'; incorrecte, no pot contenir la barra invertida
+
+        char epsilon = '\\'; //es correcte
+
+        //char zeta = '\ñ'; incorrecte, no existeix aquest caracter d'escape nomes son valids  \b  \t  \n  \f  \r  \"  \'  \\ )
+
+        //char eta = "T"; incorrecte, ha de ser comilla simple
+
+        //char theta = 'ñ';  es correcte, pero nomes perque el visual interve en la compilacio
+
+        //char iota = 'xyz'; incorrecte, nomes pot tenir un caracter
+
+        char kappa = '\u0066'; //es correcte
+
+        //char lambda = "XYZ"; incorrecte, ha de ser comilla simple i nomes un caracter
+
+        char mu = '4'; //es correcte
+
+        char nu = '\t'; //es correcte
+        
+        //char '\b'; incorrecte \b es un declaracio d'escape i no pot ser un nom de variable
+
+        //char xi = k; incorrecte, sense comilles no es un caracter i es llegeix com una variable no declarada
+
+        //char omicron = +; incorrecte, + es una expresio i no un caracter
+
+        char pi = '+'; //es correcte
+
+        char rho = '?'; //es correcte
+
+        char sigma = 'â'; //es correcte
+
+        char tau = ':'; //es correcte
+        
+        //String unus = '8:15'; incorrecte, ha de ser comilla doble i no simple
+
+        String duo = "Rojo, Blanco y Azul";
+
+        //String tres = "Nombre:; incorrecte, falta la comilla final
+
+        String quattuor = "Capítulo \'3\'"; //es correcte
+
+        String quinque = "1.3e-1-2"; //es correcte
+
+        String sextus = ""; //es correcte
+
+        String septem = " "; //es correcte
+
+        String octo = "A"; //es correcte
+
+        //String novem = "FP'; incorrecte, comilla inicial i final diferents
+
+        String decem = " programación "; //es correcte
+
+        //String undecim = "programación "Java""; incorrecte, les comilles internes han d'estar escapades
+
+        //String duodecim = programación; incorrecte, sense comilles es llegeix com una variable no declarada
+
+        //String tredecim = 'W'; incorrecte, ha de ser comilla doble i no simple
+
+        String quattuordecim = "\n"; //es correcte
+
+        String quindecim = "4 +5 * 2"; //es correcte
+
+        int p = 5; //declaracio de variable
+        System.out.println(p); //comprobacio
+
+        int q = 10; //declaracio de variable
+        System.out.println(q); //comprobacio
+
+        float x = 0.1f;  //declaracio de variable
+        System.out.println(x); //comprobacio
+
+        float y = 0.2f; //declaracio de variable
+        System.out.println(y); //comprobacio
+
+        float z = 0.3f;//declaracio de variable
+        System.out.println(z); //comprobacio
+
+        char a = 'a';//declaracio de variable
+        System.out.println(a); //comprobacio
+
+        char b = 'b'; //declaracio de variable  
+        System.out.println(b); //comprobacio
+
+        char c = 'c'; //declaracio de variable
+        System.out.println(c); //comprobacio
+
+        double raiz1 = 2.5; //declaracio de variable
+        System.out.println(raiz1); //comprobacio
+
+        double raiz2 = 3.5; //declaracio de variable
+        System.out.println(raiz2); //comprobacio
+
+        long contador = 123456789; //declaracio de variable
+        System.out.println(contador); //comprobacio
+
+        short indicador = 5; //declaracio de variable
+        System.out.println(indicador); //comprobacio
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
