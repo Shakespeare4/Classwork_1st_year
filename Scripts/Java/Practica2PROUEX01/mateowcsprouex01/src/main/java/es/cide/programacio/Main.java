@@ -334,7 +334,7 @@ public class Main {
         int edad = 18; //declaracio de variable
         System.out.println(edad); //comprobacio
 
-        int codigoPostal = 10001; //declaracio de variable
+        int codigoPostal = 07011; //declaracio de variable
         System.out.println(codigoPostal); //comprobacio
 
         float altura = 1.75f; //declaracio de variable
@@ -349,7 +349,7 @@ public class Main {
         int numeroDeHijos = 3; //declaracio de variable
         System.out.println(numeroDeHijos); //comprobacio
 
-        float iva = 0.21f; //declaracio de variable
+        float iva = 1.21f; //declaracio de variable
         System.out.println(iva); //comprobacio
 
         int tallaCamisa = 42; //declaracio de variable
@@ -401,12 +401,48 @@ public class Main {
         System.out.println((1/y1)+ (3+x1)/(y1+1)); //setena formula
 
 
-        double a2 = 5, b2 = 10, c2 = 15, d2 = 20, x2 = 25, y2 = 30, z2 = 35; //declaracio de variable
+        double a2 = 5, b2 = 10, c2 = 15, d2 = 20, x2 = 25, y2 = 30, z2 = 35, m2 = 40, n2 = 45, p2 = 50, q2 = 55, r2 = 60, s2 = 65, e2 = 70, f2 = 75, g2 = 80, h2 = 85; //declaracio de variable
         System.out.println(3/2 + 04/3); //primera formula
         System.out.println((1/x2-5)- (3*x2*y2/4)); //segona formula
         System.out.println(1/2+7); //tercera formula
         System.out.println(7+1/2);//quarta formula  
-    
+        System.out.println((Math.pow(a2, 2))/(2+4)); //quinta formula
+        System.out.println((m2/n2)+p2); //sexta formula
+        System.out.println(m2 + (n2/p2-q2)); //setena formula
+        System.out.println((Math.pow(a2, 2)/ Math.pow(b2, 2))+(Math.pow(c2, 2)/Math.pow(d2, 2))); //octava formula
+        System.out.println((m2 + n2/p2)/ (q2 - (r2/s2))); //novena formula
+        System.out.println((3*a2 + b2)/c2-(d2+5*e2)/f2+g2/2*h2); //desena formula
+        System.out.println(Math.pow(a2, 2)+ 2*a2*b2+Math.pow(b2, 2)/(1/Math.pow(x2, 2)+2));
+        
+        
+        double a3= 8, b3 = 3, c3 = -5; //declaracio de variable
+        System.out.println( a3 + b3+ c3); //primera formula
+        System.out.println(2*b3+3*(a3-c3)); //segona formula
+        System.out.println(a3/b3); //tercera formula
+        System.out.println(a3 % b3); //quarta formula
+        System.out.println(a3/c3); //quinta formula
+        System.out.println(a3 % c3); //sexta formula
+        System.out.println(a3*b3/c3); //setena formula
+        System.out.println(a3*(b3/c3)); //octava formula
+        System.out.println((a3*c3)%b3); //novena formula
+        System.out.println(a3*(c3%b3)); //desena formula
+        System.out.println((3*a3-2*b3)%(2*a3-c3)); //onzena formula
+        System.out.println(2 * ( a3 / 5 + (4 - b3 * 3)) % (a3 + c3 - 2)); //dotzena formula
+        System.out.println(((a3 - 3 * b3) % (c3 + 2 * a3) / (a3 - c3))); //trtzenena formula
+        System.out.println(a3 - b3 - c3 * 2); //catorzera formula
+        
+
+        float x3 = 88, y3= 3.5f, z3 = -5.2f; //declaracio de variable
+        System.out.println(x3 + y3 + z3); //primera formula
+        System.out.println(2 * y3 + 3 * (x3 - z3)); //segona formula
+        System.out.println(x3/y3); //tercera formula
+        System.out.println(x3 % y3); //quarta formula
+        System.out.println(x3/(y3+z3)); //quinta formula
+        System.out.println((x3/y3)+z3); //sexta formula
+        System.out.println(x3*y3/z3); //setena formula
+        System.out.println(2*x3/3*y3); //octava formula
+        System.out.println(2*x3/(y3*3)); //novena formula
+
 
 
 
