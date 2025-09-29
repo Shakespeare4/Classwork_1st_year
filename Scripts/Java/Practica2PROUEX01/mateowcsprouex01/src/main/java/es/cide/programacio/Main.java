@@ -329,16 +329,78 @@ public class Main {
         System.out.println(ultimo); //comprobacio
 
         String nombre = "Mateo"; //declaracio de variable
-        System.out.println(nombre); //comprobacio
+        System.out.println(nombre); //comprobacio 
 
+        int edad = 18; //declaracio de variable
+        System.out.println(edad); //comprobacio
+
+        int codigoPostal = 10001; //declaracio de variable
+        System.out.println(codigoPostal); //comprobacio
+
+        float altura = 1.75f; //declaracio de variable
+        System.out.println(altura); //comprobacio
+
+        String genero= "H: Hombre, M: Mujer"; //declaracio de variable
+        System.out.println(genero); //comprobacio
+
+        String nom = "John"; //declaracio de variable
+        System.out.println(nom); //comprobacio
+
+        int numeroDeHijos = 3; //declaracio de variable
+        System.out.println(numeroDeHijos); //comprobacio
+
+        float iva = 0.21f; //declaracio de variable
+        System.out.println(iva); //comprobacio
+
+        int tallaCamisa = 42; //declaracio de variable
+        System.out.println(tallaCamisa); //comprobacio
+
+        float peso = 70.5f; //declaracio de variable
+        System.out.println(peso); //comprobacio
+
+        float precio2 = 15.99f; //declaracio de variable
+        System.out.println(precio2); //comprobacio
+
+        boolean alumnoRepetidor = false; //declaracio de variable
+        System.out.println(alumnoRepetidor); //comprobacio
+
+        String mensaje = "Bonjour"; //declaracio de variable
+        System.out.println(mensaje); //comprobacio
+
+        char letra = 'A'; //declaracio de variable
+        System.out.println(letra); //comprobacio
+
+        int MayorEdad = 18; //declaracio de variable
+        System.out.println(MayorEdad); //comprobacio
         
+        int minutos = 30; //declaracio de variable
+        System.out.println(minutos); //comprobacio
 
+        int dias = 3; //declaracio de variable
+        System.out.println(dias); //comprobacio
 
+        String matriculaCoche = "1234-ABC"; //declaracio de variable
+        System.out.println(matriculaCoche); //comprobacio
 
+        int contador2 = 0; //declaracio de variable
+        System.out.println(contador2); //comprobacio
 
+        boolean mayorDeEdad = true; //declaracio de variable
+        System.out.println(mayorDeEdad); //comprobacio
 
+        String tallaCamiseta = "S, L, XL ..."; //declaracio de variable
+        System.out.println(tallaCamiseta); //comprobacio
 
-
+        int a1 = 2, b1 = 4, c1 = 6, d1 = 8, x1 = 10, y1 = 12, z1 = 14; //declaracio de variable
+        System.out.println(b1/2 - 4*a1*c1); //primera formula
+        System.out.println(3 * x1 * y1 - 5* x1 + 12* x1 -17); //segona formula
+        System.out.println((b1 + d1)/(c1 + 4)); //tercera formula
+        System.out.println((x1 *y1 ) / y1 + 2); //quarta formula
+        System.out.println((1/y1)+ (3*x1/z1)+1); //quinta formula
+        System.out.println((1/y1 + 3)*(x1/y1)); //sexta formula
+        
+        
+    
 
 
 
