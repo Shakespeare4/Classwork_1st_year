@@ -391,15 +391,21 @@ public class Main {
         String tallaCamiseta = "S, L, XL ..."; //declaracio de variable
         System.out.println(tallaCamiseta); //comprobacio
 
-        int a1 = 2, b1 = 4, c1 = 6, d1 = 8, x1 = 10, y1 = 12, z1 = 14; //declaracio de variable
+        double a1 = 2, b1 = 4, c1 = 6, d1 = 8, x1 = 10, y1 = 12, z1 = 14; //declaracio de variable
         System.out.println(b1/2 - 4*a1*c1); //primera formula
         System.out.println(3 * x1 * y1 - 5* x1 + 12* x1 -17); //segona formula
         System.out.println((b1 + d1)/(c1 + 4)); //tercera formula
         System.out.println((x1 *y1 ) / y1 + 2); //quarta formula
         System.out.println((1/y1)+ (3*x1/z1)+1); //quinta formula
         System.out.println((1/y1 + 3)*(x1/y1)); //sexta formula
-        
-        
+        System.out.println((1/y1)+ (3+x1)/(y1+1)); //setena formula
+
+
+        double a2 = 5, b2 = 10, c2 = 15, d2 = 20, x2 = 25, y2 = 30, z2 = 35; //declaracio de variable
+        System.out.println(3/2 + 04/3); //primera formula
+        System.out.println((1/x2-5)- (3*x2*y2/4)); //segona formula
+        System.out.println(1/2+7); //tercera formula
+        System.out.println()
     
 
 
