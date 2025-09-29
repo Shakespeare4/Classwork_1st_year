@@ -405,7 +405,7 @@ public class Main {
         System.out.println(3/2 + 04/3); //primera formula
         System.out.println((1/x2-5)- (3*x2*y2/4)); //segona formula
         System.out.println(1/2+7); //tercera formula
-        System.out.println()
+        System.out.println(7+1/2);//quarta formula  
     
 
 
