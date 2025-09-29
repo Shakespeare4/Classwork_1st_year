@@ -304,8 +304,38 @@ public class Main {
         short indicador = 5; //declaracio de variable
         System.out.println(indicador); //comprobacio
 
+        int indice = 7; //declaracio de variable
+        System.out.println(indice); //comprobacio
+
+        double precio = 19.95; //declaracio de variable
+        System.out.println(precio); //comprobacio
+
+        double precioFinal = precio * 2; //declaracio de variable
+        System.out.println(precioFinal); //comprobacio
         
+        char char1 = '1'; //declaracio de variable
+        System.out.println(char1); //comprobacio
+
+        char char2 = '2'; //declaracio de variable
+        System.out.println(char2); //comprobacio
+
+        byte byte1 = 10; //declaracio de variable
+        System.out.println(byte1); //comprobacio
+
+        Boolean primero = true; //declaracio de variable
+        System.out.println(primero); //comprobacio
+
+        Boolean ultimo = false; //declaracio de variable
+        System.out.println(ultimo); //comprobacio
+
+        String nombre = "Mateo"; //declaracio de variable
+        System.out.println(nombre); //comprobacio
+
         
+
+
+
+
 
 
 
