@@ -11,3 +11,34 @@ F = p & ((q v -r) & ((-p v r) & -q))         p q r s
     1     0    0       0   1     1           1 0 1 0
     1     1    1       0   0     0           1 1 0 0
     1     1    0       0   1     0           1 1 1 0
+
+
+
+
+
+
+
+
+package es.cide.programacio;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    {   System.out.println("Declara el primer nombre: ");
+        String nom1 = sc.next();
+        System.out.println("Declara el segundo nombre: ");
+        String nom2= sc.next();
+        sc.close();
+        int comparacio = nom1.compareTo(nom2);
+        if (comparacio < 0)
+        System.out.println(nom1 +" "+"<"+" "+ nom2);
+        else if (comparacio > 0)
+        System.out.println(nom1+" "+">"+" "+nom2);
+        else
+        System.out.println(nom1+" "+"="+" "+nom2);
+        
+    }
+    
+}}
