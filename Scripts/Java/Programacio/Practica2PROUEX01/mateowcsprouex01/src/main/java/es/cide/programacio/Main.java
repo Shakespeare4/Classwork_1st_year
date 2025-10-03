@@ -1,11 +1,14 @@
 //nom: Mateo William Carter Shakespeare
 //data: 25/09/2025
 //nie: Y1723089-N
-
+//Disculpa lo feo que ha quedado el codigo
 package es.cide.programacio;
 
 public class Main {
     public static void main(String[] args) {
+                    //Indica els identificadors correctes
+
+
         int registro1; //es correcte
 
         //int 1registro; incorrecte, no pot començar per numero
@@ -71,6 +74,10 @@ public class Main {
         //int 0X1A; incorrecte, no pot començar per numero
 
         //int else; incorrecte, else es una paraula reservada
+        
+                    //Identifica els literals correctes
+        System.out.println("Indica els literals correctes");
+        System.out.println("");
 
         double primera = 0.5; //es correcte
         System.out.println(primera); //comprobacio
@@ -198,6 +205,9 @@ public class Main {
         
         //int cuadragesimaoctava =  0X12AG; incorrecte, un hexadecimal no pot contenir lletres diferents de A-F
         
+
+                    //excercicis de literals tipus "char"
+
         char alfa = 'a'; //es correcte
 
         char beta = '$'; //es correcte
@@ -238,6 +248,9 @@ public class Main {
 
         char tau = ':'; //es correcte
         
+                //Excercicis sobre strings
+
+
         //String unus = '8:15'; incorrecte, ha de ser comilla doble i no simple
 
         String duo = "Rojo, Blanco y Azul";
@@ -267,6 +280,11 @@ public class Main {
         String quattuordecim = "\n"; //es correcte
 
         String quindecim = "4 +5 * 2"; //es correcte
+
+                //Declara les següents variables
+        System.out.println("");
+        System.out.println("Declara les següents variables");
+        System.out.println("");
 
         int p = 5; //declaracio de variable
         System.out.println(p); //comprobacio
@@ -331,10 +349,15 @@ public class Main {
         String nombre = "Mateo"; //declaracio de variable
         System.out.println(nombre); //comprobacio 
 
+                //Declara aquestes variables
+        System.out.println("");
+        System.out.println("Declara aquestes variables");
+        System.out.println("");
+
         int edad = 18; //declaracio de variable
         System.out.println(edad); //comprobacio
 
-        int codigoPostal = 07011; //declaracio de variable
+        int codigoPostal = 10001; //declaracio de variable
         System.out.println(codigoPostal); //comprobacio
 
         float altura = 1.75f; //declaracio de variable
@@ -349,7 +372,7 @@ public class Main {
         int numeroDeHijos = 3; //declaracio de variable
         System.out.println(numeroDeHijos); //comprobacio
 
-        float iva = 1.21f; //declaracio de variable
+        float iva = 0.21f; //declaracio de variable
         System.out.println(iva); //comprobacio
 
         int tallaCamisa = 42; //declaracio de variable
@@ -391,6 +414,11 @@ public class Main {
         String tallaCamiseta = "S, L, XL ..."; //declaracio de variable
         System.out.println(tallaCamiseta); //comprobacio
 
+        //Convertir les expressions algebraiques a algoritmiques
+        System.out.println("");
+        System.out.println("Convertir les expresions algebraiques a algoritmiques");
+        System.out.println("");
+
         double a1 = 2, b1 = 4, c1 = 6, d1 = 8, x1 = 10, y1 = 12, z1 = 14; //declaracio de variable
         System.out.println(b1/2 - 4*a1*c1); //primera formula
         System.out.println(3 * x1 * y1 - 5* x1 + 12* x1 -17); //segona formula
@@ -400,207 +428,354 @@ public class Main {
         System.out.println((1/y1 + 3)*(x1/y1)); //sexta formula
         System.out.println((1/y1)+ (3+x1)/(y1+1)); //setena formula
 
-
-        double a2 = 5, b2 = 10, c2 = 15, d2 = 20, x2 = 25, y2 = 30, z2 = 35, m2 = 40, n2 = 45, p2 = 50, q2 = 55, r2 = 60, s2 = 65, e2 = 70, f2 = 75, g2 = 80, h2 = 85; //declaracio de variable
+                //Convertir les expresions algebraiques a algoritmiques (2)
+        System.out.println("");
+        System.out.println("Convertir les expresions algebraiques a algoritmiques(2)");
+        System.out.println("");
+        double a2 = 5, b2 = 10, c2 = 15, d2 = 20, x2 = 25, y2 = 30, e2 = 35, f2 = 40, g2 = 45, h2=50, j2=55, m2 = 60, n2 = 65, p2 = 70, q2 = 75, r2 = 80, s2 = 85; //declaracio de variable
         System.out.println(3/2 + 04/3); //primera formula
         System.out.println((1/x2-5)- (3*x2*y2/4)); //segona formula
         System.out.println(1/2+7); //tercera formula
         System.out.println(7+1/2);//quarta formula  
-        System.out.println((Math.pow(a2, 2))/(2+4)); //quinta formula
+        System.out.println(Math.pow(a2, 2/b2-c2)+((d2-e2)/f2-(g2*h2/j2))); //quinta formula
         System.out.println((m2/n2)+p2); //sexta formula
-        System.out.println(m2 + (n2/p2-q2)); //setena formula
-        System.out.println((Math.pow(a2, 2)/ Math.pow(b2, 2))+(Math.pow(c2, 2)/Math.pow(d2, 2))); //octava formula
-        System.out.println((m2 + n2/p2)/ (q2 - (r2/s2))); //novena formula
-        System.out.println((3*a2 + b2)/c2-(d2+5*e2)/f2+g2/2*h2); //desena formula
-        System.out.println(Math.pow(a2, 2)+ 2*a2*b2+Math.pow(b2, 2)/(1/Math.pow(x2, 2)+2));
-        
-        
-        double a3= 8, b3 = 3, c3 = -5; //declaracio de variable
-        System.out.println( a3 + b3+ c3); //primera formula
+        System.out.println(m2+ (n2/p2-q2)); //setena formula
+        System.out.println(((Math.pow(a2, 2)/Math.pow(b2, 2))+(Math.pow(c2, 2)/Math.pow(d2, 2)))); //octava formula
+        System.out.println((m2+(n2/p2))/(q2-(r2/s2))); //novena formula
+        System.out.println(((3*a2)+b2)/(c2-(d2+5*e2)/(f2+(g2/2*h2)))); //desena formula
+        System.out.println((Math.pow(a2, 2)+(2*a2*b2)+(Math.pow(b2, 2)))/(1/(Math.pow(x2, 2))+2)); //onzena formula
+
+                //Si a, b y c son variables senceres amb valors a=8, b=3, c=-5, determina el valor de les següents expressions aritmètiques:
+        System.out.println("");
+        System.out.println("Si a, b y c son variables senceres amb valors a=8, b=3, c=-5, determina el valor de les següents expressions aritmètiques:");
+        System.out.println("");
+
+        double a3 = 8, b3 = 2, c3 = -5; //declaracio de variable
+        System.out.println(a3+b3+c3); //primera formula
         System.out.println(2*b3+3*(a3-c3)); //segona formula
         System.out.println(a3/b3); //tercera formula
-        System.out.println(a3 % b3); //quarta formula
+        System.out.println(a3%b3); //quarta formula
         System.out.println(a3/c3); //quinta formula
-        System.out.println(a3 % c3); //sexta formula
+        System.out.println(a3%c3); //sexta formula
         System.out.println(a3*b3/c3); //setena formula
-        System.out.println(a3*(b3/c3)); //octava formula
+        System.out.println(a*(b3/c3)); //octava formula
         System.out.println((a3*c3)%b3); //novena formula
         System.out.println(a3*(c3%b3)); //desena formula
         System.out.println((3*a3-2*b3)%(2*a3-c3)); //onzena formula
-        System.out.println(2 * ( a3 / 5 + (4 - b3 * 3)) % (a3 + c3 - 2)); //dotzena formula
-        System.out.println(((a3 - 3 * b3) % (c3 + 2 * a3) / (a3 - c3))); //trtzenena formula
-        System.out.println(a3 - b3 - c3 * 2); //catorzera formula
-        
+        System.out.println(2*(a3/5+(4-b3*3))%(a3+c3-2)); //dotzena formula
+        System.out.println((a3-3*b3)%(c3+2*a3)/(a3-c3)); //tretzena formula
+        System.out.println(a3-b3-c3*2); //catorzena formula
 
-        float x3 = 88, y3= 3.5f, z3 = -5.2f; //declaracio de variable
-        System.out.println(x3 + y3 + z3); //primera formula
-        System.out.println(2 * y3 + 3 * (x3 - z3)); //segona formula
+                //Si x, y, z son variables de tipus double amb valors x= 88, y = 3.5, z = -5.2, determina el valor de les següents expressions aritmètiques. Obtén el resultat de cada expressió amb un màxim de quatre decimals.
+        System.out.println("");
+        System.out.println("Si x, y, z son variables de tipus double amb valors x= 88, y = 3.5, z = -5.2, determina el valor de les següents expressions aritmètiques. Obtén el resultat de cada expressió amb un màxim de quatre decimals.");
+        System.out.println("");
+
+        float x3= 88, y3= 3.5f, z3= -5.2f; //declaracio de variable
+        System.out.println(x3+y3+z3); //primera formula
+        System.out.println(2*y3+3*(x3-z3)); //segona formula
         System.out.println(x3/y3); //tercera formula
-        System.out.println(x3 % y3); //quarta formula
+        System.out.println(x3%y3); //quarta formula
         System.out.println(x3/(y3+z3)); //quinta formula
         System.out.println((x3/y3)+z3); //sexta formula
-        System.out.println(x3*y3/z3); //setena formula
-        System.out.println(2*x3/3*y3); //octava formula
-        System.out.println(2*x3/(y3*3)); //novena formula
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(2*x3-z3-2*x3); //setena formula
+        System.out.println(2*x3/(3*y3)); //octava formula
+        System.out.println(x3*y3%z3); //novena formula
+        System.out.println(x3*(y3%z3)); //desena formula
+        System.out.println(3*x3-z3-2*x3); //onzena formula 
+        System.out.println(2*x3/5%y3); //dotzena formula
+        System.out.println(x3-100%y3%z3); //tretzena formula
+        System.out.println(x3-y3-z3*2); //catorzena formula
+
+                //Determina quin és el tipus de data del resultat de les següents expressions aritmètiques:
+        System.out.println("");
+        System.out.println("Determina quin és el tipus de data del resultat de les següents expressions aritmètiques:");
+        System.out.println("");
+
+        byte b4 = 2; //declaracio de variable
+        short s = 3; //declaracio de variable
+        long ln = 4L; //declaracio de variable
+        int i = 5, j = 6; //declaracio de variable
+        float f = 7.0f; //declaracio de variable
+        double d = 8.0; //declaracio de variable
+        char c4 = 'A'; //declaracio de variable
+        int operacionA =b4 + c4; //byte + char = int
+        System.out.println(operacionA); //comprobacio 
+        float opercaionB = f - c4; //float - char = float
+        System.out.println(opercaionB); //comprobacio
+        double operacionC = d + i; //double + int = double
+        System.out.println(operacionC); //comprobacio
+        double operacionD = d +i; //double + int = double
+        System.out.println(operacionD); //comprobacio
+        float operacionE = i /f; //int / float = float
+        System.out.println(operacionE); //comprobacio
+        int operacionF = s + j; //short + int = int
+        System.out.println(operacionF); //comprobacio
+        double operacionG = d+j ; //double + int = double
+        System.out.println(operacionG); //comprobacio
+        int operacionH = s * c4; //short * char = int
+        System.out.println(operacionH); //comprobacio
+        double operacionI = d + c4; //double + char = double
+        System.out.println(operacionI); //comprobacio
+        int operacionJ = b+c4; //byte + char = int
+        System.out.println(operacionJ); //comprobacio
+        int operacionK = b/c4+s; //byte / char + short = int
+        System.out.println(operacionK); //comprobacio
+        int operacionL = c4 + c4; //char + char = int
+        System.out.println(operacionL); //comprobacio
+        double operacionM = i+ln+d;//int + long + double = double
+        System.out.println(operacionM); //comprobacio
+        long operacionN = ln + c4; //long + char = long
+        System.out.println(operacionN); //comprobacio
+        int operacionO = 5/j; //int / int = int
+        System.out.println(operacionO); //comprobacio
+        double operacionP = 5.2/j; //double / int = double
+        System.out.println(operacionP); //comprobacio
+        double operacionQ = i*f*2.5; //int * float * double = double
+        System.out.println(operacionQ); //comprobacio
+        float operacionR = ln*f*2.5f;//long * float * float = float
+        System.out.println(operacionR); //comprobacio
+        long operacionS = j-4L; //int - long = long
+        System.out.println(operacionS); //comprobacio
+        float operacionT = j-4L *2.5f; //int - long * float = float
+        System.out.println(operacionT); //comprobacio
+        double operacionU = b+2.5*i+35f;//byte + double * int + float = double
+        System.out.println(operacionU); //comprobacio
+        int operacionV = 'a'+ b4; //char + byte = int
+        System.out.println(operacionV); //comprobacio
+        int operacionW = 'a'+ c4; //char + char = int
+        System.out.println(operacionW); //comprobacio
+        int operacionX = c4+2; //char + int = int
+        System.out.println(operacionX); //comprobacio
+        long operacionY = c4-ln/2;
+        System.out.println(operacionY); //comprobacio
+        double operacionZ = 2/i+2.0/j; //int + double / int = double
+        System.out.println(operacionZ); //comprobacio
+
+                //Si X, Y y Z son variables de tipus boolean amb valors X = true, Y = false, Z = true, determina el valor de les següents expressions lògiques:
+        System.out.println("");
+        System.out.println("Si X, Y y Z son variables de tipus boolean amb valors X = true, Y = false, Z = true, determina el valor de les següents expressions lògiques:");
+        System.out.println("");
+
+        boolean X = true; //declaracio de variable
+        boolean Y = false; //declaracio de variable
+        boolean Z = true; //declaracio de variable
+        System.out.println((X&&Y)||(X&&Z));//primera expresio
+        System.out.println((X||!Y)&&(!X||Z));//segona expresio
+        System.out.println(X||Y&&Z);//tercera expresio 
+        System.out.println(!(X||Y)&&Z);//quarta expresio
+        System.out.println(X||Y||X&&!Z&&!Y);//quinta expresio
+        System.out.println(!X||!Y||Z&&X&&!Y);//sexta expresio
+
+                //Si W, X i Y son variables de tipus boolean amb valors W = false, X = true, Y = true, Z = false,  determina el valor de les següents expressions lògiques:
+        System.out.println("");
+        System.out.println("Si W, X i Y son variables de tipus boolean amb valors W = false, X = true, Y = true, Z = false,  determina el valor de les següents expressions lògiques:");
+        System.out.println("");
+
+        boolean W = false; //declaracio de variable
+        boolean X2 = true; //declaracio de variable
+        boolean Y2 = true; //declaracio de variable
+        boolean Z2 = false; //declaracio de variable
+        System.out.println(W||Y2&&X2&&W||Z2);//primera expresio
+        System.out.println(X2&&!Y2&&!X2||!W&&Y2);//segona expresio
+        System.out.println(!(W||Y2)&&X2||Z2);//tercera expresio
+        System.out.println(X2&&Y2&&W||Z2||X2);//quarta expresio
+        System.out.println(Y2||!(Y2||Z2&&W));//quinta expresio
+        System.out.println(!X2&&Y2&&(!Z2||!X2));//sexta expresio
+
+
+                //Determina el valor de les següents expressions:
+        System.out.println("");
+        System.out.println("Determina el valor de les següents expressions:");
+        System.out.println("");
+        
+        int i2 = 8, j3 = 5;//declaracio de variable
+        float x5 = 0.005f, y5 = -0.01f;
+        char c5 = 'c', d3 = 'd';
+        System.out.println(i2<=j3);//primera expresio
+        System.out.println(c5>d3);//segona expresio
+        System.out.println(x5<=0);//tercera expresio
+        System.out.println(x5<y5--);//quarta expresio
+        System.out.println(j3!=6);//quinta expresio
+        System.out.println(c5==99);//sexta expresio
+        System.out.println(!(i2<=j3));//setena expresio
+        System.out.println(!(c5==99));//octava expresio
+        System.out.println(!(x5>0));//novena expresio
+        System.out.println(-j3==i2-13);//desena expresio
+        System.out.println(++x5>0);//onzena expresio
+        System.out.println(y5--<1);//dotzena expresio
+        System.out.println(c5>d3||c5>0);//tretzena expres
+        System.out.println(5*(i2+j3)>'c');//catorzena expresio
+        System.out.println(2*x5+y5==0);//quinzena expresio
+        //System.out.println(2*x5+(y5==0));setzena expresio no es pot resoldre, el operador + que s'aplica a un float i un boolean no es pot realitzar
+        System.out.println(x5+y5>=0);//divuitena expresio
+        System.out.println(x5<++y);//denovena expresio
+        System.out.println(-(i2+j3)!=-i2+j3);//vigesima expresio
+        System.out.println(i2<=j3&&i>=c5);//vigesimoprimera expresio
+        System.out.println(i2>0&&j3<5);//vigesimasegunda expresio
+        System.out.println(i2>0||j3<5);//vigesimatercera expresio
+        System.out.println(x5>y5&&i2>0||j3<5);//vigesimacuarta expresio
+        System.out.println((3*i2-2*j3)%(2*d3-c5)>3*d3);//vigesimaquinta expresio
+        System.out.println(2*((i2/5)+(4*(j3-3))%(i2+j3-2))>=10);//vigesimasexta expresio
+        System.out.println((i2-3*j3)%(c5+2*d3)/(x5-y5)>=0);//vigesimasetena expresio
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
