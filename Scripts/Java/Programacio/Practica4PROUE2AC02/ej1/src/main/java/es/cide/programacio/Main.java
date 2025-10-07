@@ -13,10 +13,11 @@ public class Main {
         while (i <= n) {
             //incrementa la i en uno
             i++;
-            //si m es par
+            //si i es par
             if (i % 2 == 0) {
                 //suma m y i
                 m = m + i;
+                //incrementa i
                 i++;
             //de lo contrario incrementa la i
             }else {i++;};
@@ -24,6 +25,7 @@ public class Main {
         }
         //imprimimos el resultado
         System.out.print(m);
+        //cerramos el scanner
         sc.close();
     }
 }
