@@ -3,19 +3,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-        int i = 0;
+        //creamos uevo scanner
+        Scanner sc = new Scanner(System.in);
+        //declaramos las variables
+        int i = 1;
         int n = sc.nextInt();
         int m = 0;
+        //mientras i sea menor o igual que n 
         while (i <= n) {
-            m = m + i;
-        if (m % 2 == 0) {
-            m = m + i;
-        }else{
-
-        
-        System.out.print(m);}
+            //incrementa la i en uno
+            i++;
+            //si m es par
+            if (i % 2 == 0) {
+                //suma m y i
+                m = m + i;
+                i++;
+            //de lo contrario incrementa la i
+            }else {i++;};
+            
+        }
+        //imprimimos el resultado
+        System.out.print(m);
         sc.close();
-    
     }
-}}
+}
