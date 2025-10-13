@@ -1,13 +1,17 @@
 package es.cide.programacio;
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Quina taula de multiplcar vols?");
-        int taula = sc.nextInt();
-        for (int i = 0; i<= 10; i++){
-            int resultat = taula*i;
-            System.out.println(taula +"* "+ i+ "= " +resultat);
-        }sc.close();
+        int num1 ;
+        int num2 ;
+        try{
+        num1=0;
+        num2=62/num1;
+        System.out.println("Final try");
+        
+        }catch ( ArithmeticException e){
+            e.printStackTrace();
+            System.out.println("Error no se puede dividir entre 0");
+        }
+    finally {System.out.println("Bloc Finally");}
     }
 }
