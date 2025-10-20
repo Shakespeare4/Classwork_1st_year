@@ -1,8 +1,11 @@
+/*Mateo WIlliam Carter Shakespeare
+20/10/2025
+NIE: Y1723089N*/
 package es.cide.programacio;
 
-import java.util.Scanner;
-import java.util.InputMismatchException;
-import java.util.Random;
+import java.util.Scanner;//Importamos el scanner
+import java.util.InputMismatchException;//Importamos la excepcion de input mismatch
+import java.util.Random;//Importamos el random
 
 public class Main {
 
