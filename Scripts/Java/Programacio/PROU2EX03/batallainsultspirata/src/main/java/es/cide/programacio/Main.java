@@ -44,6 +44,7 @@ public class Main {
 
         int chosenIndex;// Creamos una variable para guardar la posicion de la respuesta elegida por el jugador
 
+        boolean validRound; // Creamos una variable para asegurar que el numero de rondas sea valido
         //inicializamos los arrays
 
         String[] insults = {// Creamos un array con los insultos
@@ -69,10 +70,27 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
+        validInput = false;// Establecemos el valor predeterminado de la variable validInput
+
+        while (!validInput){// Mientras validInput sea "false"
         try{// usamos el try para probar el codigo
+            
+
             System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
 
             roundrequest = sc.nextInt();// Guardamos la respuesta en la variable
+
+            if (roundrequest == 3 || roundrequest == 5){// Comprobamos que el numero de rondas sea 3 o 5
+
+                validInput = true;// si lo son, validInput es "true"
+            } else {// De lo contrario
+
+                System.out.println();// Imprimimos una linea en blanco
+
+                System.out.println("¡Ese numero no existe! Los piratas solo contamos del 1 al 3");// Imprimimos un mensaje de error
+
+                System.out.println();// Imprimimos una linea en blanco
+            }
 
         } catch (InputMismatchException e) {// Si el usuario introduce in valor que no sea entero (int)
 
@@ -84,7 +102,10 @@ public class Main {
 
             sc.nextLine(); 
         }
+    }
 
+        
+        
 
         while (rounds < roundrequest) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
             
