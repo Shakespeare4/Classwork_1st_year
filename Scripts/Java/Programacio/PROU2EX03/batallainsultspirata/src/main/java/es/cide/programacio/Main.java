@@ -41,16 +41,16 @@ public class Main {
 
         //inicializamos los arrays
 
-        String[] insults = {
-            "Eres tan repulsivo como un mono en lencería",
-            "Luchas como un granjero",
-            "He hablado con simios más educados que tú"
+        String[] insults = {// Creamos un array con los insultos
+            "¡Eres tan repulsivo como un mono en lencería!",
+            "¡Luchas como un granjero!",
+            "¡He hablado con simios más educados que tú!"
         };
 
-        String[] comebacks = {
-            "No sabía que me parecía tanto a tu amada",
-            "Qué suerte que tú peleas como una vaca",
-            "Al menos ellos me escuchan, a diferencia de ti"
+        String[] comebacks = {// Creamos un array con las respuestas
+            "¡No sabía que me parecía tanto a tu amada!",
+            "¡Qué suerte que tú peleas como una vaca!",
+            "¡Me alegra que fueras a tu reunión familiar!"
         };
         boolean[] insultUsed = new boolean[insults.length];// Creamos un array que permita guardar los insultos usados
 
