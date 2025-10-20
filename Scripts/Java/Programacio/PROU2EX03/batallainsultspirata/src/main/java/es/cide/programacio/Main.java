@@ -70,11 +70,11 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
-        validInput = false;// Establecemos el valor predeterminado de la variable validInput
+        validRound = false;// Establecemos el valor predeterminado de la variable validRound
 
-        while (!validInput){// Mientras validInput sea "false"
+        while (!validRound){// Mientras validRound sea "false"
         try{// usamos el try para probar el codigo
-            
+
 
             System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
 
@@ -82,12 +82,12 @@ public class Main {
 
             if (roundrequest == 3 || roundrequest == 5){// Comprobamos que el numero de rondas sea 3 o 5
 
-                validInput = true;// si lo son, validInput es "true"
+                validRound = true;// si lo son, validRound es "true"
             } else {// De lo contrario
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                System.out.println("¡Ese numero no existe! Los piratas solo contamos del 1 al 3");// Imprimimos un mensaje de error
+                System.out.println("Ese numero no me suena, prueba otro >>(3 o 5)<<");// Imprimimos un mensaje de error
 
                 System.out.println();// Imprimimos una linea en blanco
             }
@@ -200,7 +200,7 @@ public class Main {
 
             System.out.println(); // Imprimimos una linea en blanco
 
-            System.out.println("¡Eso no es una opción válida! Prueba otra vez (1-3).");// Imprimimos mensaje de error
+            System.out.println("¡Ese numero no existe! Los piratas solo contamos del 1 al 3.");// Imprimimos mensaje de error
 
             System.out.println();// Imprimimos una linea en blanco
 
@@ -223,7 +223,7 @@ public class Main {
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                System.out.println("¡ARGH, parece que esta ronda es tuya!");// Si es correcta, imprimimos un mensaje de victoria
+                System.out.println("¡ARGH!, Parece que esta ronda es tuya...");// Si es correcta, imprimimos un mensaje de victoria
 
                 System.out.println();// Imprimimos una linea en blanco
 
