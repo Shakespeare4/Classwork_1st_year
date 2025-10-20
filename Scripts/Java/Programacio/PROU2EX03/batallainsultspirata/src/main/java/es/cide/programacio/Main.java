@@ -4,7 +4,7 @@ NIE: Y1723089N*/
 package es.cide.programacio;
 
 import java.util.Scanner;//Importamos el scanner
-import java.util.InputMismatchException;//Importamos la excepcion de input mismatch, al parecer no es necesario pero no he encontrado otra solución
+import java.util.InputMismatchException;//Importamos la excepcion de input mismatch, al parecer no es necesario pero no he encontrado otra solución debido a que el scanner es de util y devuelve este error 
 import java.util.Random;//Importamos el random
 
 public class Main {
@@ -56,8 +56,8 @@ public class Main {
         };
 
         String[] comebacks = {// Creamos un array con las respuestas
-            "¿Tanto me parezco a  tu prometida?",
-            "¡Qué suerte que tú peleas como una vaca!",
+            "¿Tanto me parezco a tu prometida?",
+            "¡Suerte que tú peleas como una vaca!",
             "¡Me alegra que fueras a tu reunión familiar!",
             "Con un aliento como ese, ¡Se habran ahogado!",
             "¡Una pena que nadie haya oído hablar de tí!"
@@ -92,7 +92,7 @@ public class Main {
                 System.out.println();// Imprimimos una linea en blanco
             }
 
-        } catch (InputMismatchException e) {// Si el usuario introduce in valor que no sea entero (int)
+        } catch (ClassCastException e) {// Si el usuario introduce in valor que no sea entero (int)
 
             System.out.println();// Imprimimos una linea en blanco
 
