@@ -22,7 +22,7 @@ public class Main {
 
         int rounds = 0;// Creamos una variable para guardar el numero de rondas jugadas
 
-        int roundrequest;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
+        int roundrequest = 0;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
 
         int correctAnswerIndex;// Creamos una variable para guardar la respuesta correcta
         
@@ -69,8 +69,22 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
-        System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
-        roundrequest = sc.nextInt();// Guardamos la respuesta en la variable
+        try{// usamos el try para probar el codigo
+            System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
+
+            roundrequest = sc.nextInt();// Guardamos la respuesta en la variable
+
+        } catch (InputMismatchException e) {// Si el usuario introduce in valor que no sea entero (int)
+
+            System.out.println();// Imprimimos una linea en blanco
+
+            System.out.println("¡Eso no es un número, grumete! ¿Es que no sabes contar?");// Imprimimos mensaje de error
+
+            System.out.println();// Imprimimos una linea en blanco
+
+            sc.nextLine(); 
+        }
+
 
         while (rounds < roundrequest) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
             
