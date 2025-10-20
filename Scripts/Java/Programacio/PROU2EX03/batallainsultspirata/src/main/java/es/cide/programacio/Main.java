@@ -22,6 +22,8 @@ public class Main {
 
         int rounds = 0;// Creamos una variable para guardar el numero de rondas jugadas
 
+        int roundrequest;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
+
         int correctAnswerIndex;// Creamos una variable para guardar la respuesta correcta
         
         boolean alreadyUsed;// Creamos una variable para guardar si esa respuesta ya se ha usado
@@ -47,13 +49,17 @@ public class Main {
         String[] insults = {// Creamos un array con los insultos
             "¡Eres tan repulsivo como un mono en lencería!",
             "¡Luchas como un granjero!",
-            "¡He hablado con simios más educados que tú!"
+            "¡He hablado con simios más educados que tú!",
+            "¡Cada enemigo con el que he luchado ha sido aniquilado!",
+            "¡Mi espada es conocida por todo el caribe!"
         };
 
         String[] comebacks = {// Creamos un array con las respuestas
-            "¡No sabía que me parecía tanto a tu amada!",
+            "¿Tanto me parezco a  tu prometida?",
             "¡Qué suerte que tú peleas como una vaca!",
-            "¡Me alegra que fueras a tu reunión familiar!"
+            "¡Me alegra que fueras a tu reunión familiar!",
+            "Con un aliento como ese, ¡Se habran ahogado!",
+            "¡Una pena que nadie haya oído hablar de tí!"
         };
         boolean[] insultUsed = new boolean[insults.length];// Creamos un array que permita guardar los insultos usados
 
@@ -63,7 +69,10 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
-        while (rounds < 3) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
+        System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
+        roundrequest = sc.nextInt();// Guardamos la respuesta en la variable
+
+        while (rounds < roundrequest) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
             
             
             do {// Elegimos un insulto aleatorio que no se haya usado, usamos do while para asegurarnos de que se cumple la condicion y queremos que el insulto se elija aleatoriamente
@@ -222,7 +231,7 @@ public class Main {
         
             System.out.println();// Imprimimos una linea en blanco
 
-        } else {
+        } else {// Realisticamente, esta opción es nula porque el numero de rondas es impar, pero me gusta tenerla por si acaso. En caso de empate
 
             System.out.println();// Imprimimos una linea en blanco
 
