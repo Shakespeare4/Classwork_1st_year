@@ -4,7 +4,7 @@ NIE: Y1723089N*/
 package es.cide.programacio;
 
 import java.util.Scanner;//Importamos el scanner
-import java.util.InputMismatchException;//Importamos la excepcion de input mismatch
+import java.util.InputMismatchException;//Importamos la excepcion de input mismatch, al parecer no es necesario pero no he encontrado otra solución
 import java.util.Random;//Importamos el random
 
 public class Main {
@@ -112,8 +112,7 @@ public class Main {
             
             do {// Elegimos un insulto aleatorio que no se haya usado, usamos do while para asegurarnos de que se cumple la condicion y queremos que el insulto se elija aleatoriamente
 
-                insultIndex = ra.nextInt(insults.length);
-
+                insultIndex = ra.nextInt(insults.length);// Le damos el valor de una posicion aleatoria de array
             } while (insultUsed[insultIndex]);
 
             insultUsed[insultIndex] = true;  // Marcamos esta respuesta como usada
