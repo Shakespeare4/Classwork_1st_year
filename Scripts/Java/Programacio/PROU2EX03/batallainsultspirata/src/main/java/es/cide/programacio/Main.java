@@ -18,8 +18,6 @@ public class Main {
 
         int score = 0;// Creamos una variable para guardar la puntuación del jugador
 
-        int enscore = 0;//Creamos una variable para guardar la puntuanción del rival
-
         int rounds = 0;// Creamos una variable para guardar el numero de rondas jugadas
 
         int roundrequest = 0;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
@@ -34,7 +32,7 @@ public class Main {
 
         int insultIndex;// Creamos una variable para la posicion del insulto usado
 
-        int swapIndex;// Creamos una variable para guardar la posicion en la que guradamos un valor para despues intercambiarlo 
+        int swapIndex;// Creamos una variable para guardar la posicion temporal de una respuesta para poder intercambiarla de sitio 
 
         int temp;//Creamos otra variable para guardar el valor temporalmente durante el intercambio
 
@@ -45,6 +43,9 @@ public class Main {
         int chosenIndex;// Creamos una variable para guardar la posicion de la respuesta elegida por el jugador
 
         boolean validRound; // Creamos una variable para asegurar que el numero de rondas sea valido
+
+        boolean playing = true;
+
         //inicializamos los arrays
 
         String[] insults = {// Creamos un array con los insultos
@@ -52,7 +53,11 @@ public class Main {
             "¡Luchas como un granjero!",
             "¡He hablado con simios más educados que tú!",
             "¡Cada enemigo con el que he luchado ha sido aniquilado!",
-            "¡Mi espada es conocida por todo el caribe!"
+            "¡Mi espada es conocida por todo el caribe!",
+            "¡Tenía un perro más inteligente que tu!",
+            "¿Ya has dejado de llevar pañales?",
+            "No hay palabras para lo aqueroso que eres.",
+            "¡Me haces querer vomitar!"
         };
 
         String[] comebacks = {// Creamos un array con las respuestas
@@ -60,7 +65,11 @@ public class Main {
             "¡Suerte que tú peleas como una vaca!",
             "¡Me alegra que fueras a tu reunión familiar!",
             "Con un aliento como ese, ¡Se habran ahogado!",
-            "¡Una pena que nadie haya oído hablar de tí!"
+            "¡Una pena que nadie haya oído hablar de tí!",
+            "¡Te debió enseñar todo lo que sabes!",
+            "¿Por que, quieres que te preste uno?",
+            "Si las hay, solo que nunca las aprendiste.",
+            "¡Tu me haces pensar que alguien ya lo hizo!"
         };
         boolean[] insultUsed = new boolean[insults.length];// Creamos un array que permita guardar los insultos usados
 
@@ -70,9 +79,12 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
+        System.out.println("Comprueba tu astucia diciendo la respuesta correcta.");
+
         validRound = false;// Establecemos el valor predeterminado de la variable validRound
 
         while (!validRound){// Mientras validRound sea "false"
+
         try{// usamos el try para probar el codigo
 
 
@@ -107,7 +119,7 @@ public class Main {
         
         
 
-        while (rounds < roundrequest) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
+        while (rounds < roundrequest&& playing) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
             
             
             do {// Elegimos un insulto aleatorio que no se haya usado, usamos do while para asegurarnos de que se cumple la condicion y queremos que el insulto se elija aleatoriamente
@@ -124,7 +136,7 @@ public class Main {
 
             count = 1;// Le damos valor 1 al contador porque ya tenemos una opcion en el array
 
-            // Fill the rest with different (incorrect) options
+            
             
             while (count < 3) {// Llenamos el array "options" con 2 respuestas incorrectas diferentes
 
@@ -183,8 +195,6 @@ public class Main {
 
         while (!validInput) {// Validamos el input del usuario 
 
-            try {// usamos el try para probar el codigo
-
                 System.out.print("Elige tu respuesta (1-3): ");// Pedimos la respuesta al usuario
 
                 System.out.println();// Imprimimos una linea en blanco
@@ -195,7 +205,12 @@ public class Main {
 
                 validInput = true;//establecemos la variable como true para detener el while
 
-        } else {
+        }else if (answer == Character.getNumericValue('n') ){
+            playing = false;
+        }
+        
+        
+        else {
 
             System.out.println(); // Imprimimos una linea en blanco
 
@@ -204,16 +219,7 @@ public class Main {
             System.out.println();// Imprimimos una linea en blanco
 
         }
-    } catch (InputMismatchException e) {// Si el usuario introduce in valor que no sea entero (int)
-
-        System.out.println();// Imprimimos una linea en blanco
-
-        System.out.println("¡Eso no es un número, grumete! ¿Es que no sabes contar?");// Imprimimos mensaje de error
-
-        System.out.println();// Imprimimos una linea en blanco
-
-        sc.nextLine(); 
-    }
+    
 }
 
             chosenIndex = options[answer - 1];// Guardamos la posicion de la respuesta elegida por el jugador
@@ -232,13 +238,32 @@ public class Main {
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                System.out.println("¿Acaso te enseñó a hablar una sanguijuela? ¡Esta es mía!");// Imprimimos un mensaje de derrota
+                System.out.println("¿Acaso te ha enseñado a ahablar un percebe? Esta ronda la has perdido");// Si es correcta, imprimimos un mensaje de victoria
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                enscore++;// Sumamos un punto al rival
+                score--;
 
-            }rounds++;// Sumamos una ronda jugada
+
+            }if (score == -1){
+                System.out.print("¡Has muerto, seras comida de gaviota! Lo quieres volver a intentar?");
+                
+                System.out.println("1- Si      2-No");
+
+                answer = sc.nextInt();
+                if (answer == 1){
+                    playing = true;
+                }else if (answer ==2){
+                    playing = false;
+                }else {
+                    System.out.println("Elige un numero valido");
+                }
+            
+            
+
+            }
+            
+            rounds++;// Sumamos una ronda jugada
 
             
         }
@@ -249,35 +274,35 @@ public class Main {
         
         System.out.println();// Imprimimos una linea en blanco
 
-        if (score > enscore) {
+        if (score == roundrequest) {
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("¡Me rindo! No te gano en espada ni en palabras. ¡Volveremos a vernos las caras!");// Si el jugador tiene más puntos, imprimimos un mensaje de victoria
+            System.out.println("¡Eres el rei de los piratas!");// Si el jugador tiene más puntos, imprimimos un mensaje de victoria
         
             System.out.println();// Imprimimos una linea en blanco
 
-        } else if (enscore > score){
+        } else if ( score > roundrequest/2){
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("¿Eso es todo? ¡He visto sardinas con mayor habilidad!");// Si el rival tiene más puntos, imprimimos un mensaje de derrota
+            System.out.println("Te has defendido como un buen marinero");
         
             System.out.println();// Imprimimos una linea en blanco
 
-        } else {// Realisticamente, esta opción es nula porque el numero de rondas es impar, pero me gusta tenerla por si acaso. En caso de empate
+        } else if (score <= roundrequest/2) {
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("¿Igualados? ¡Parece que te has ganado mi respeto!");// Si hay empate, imprimimos un mensaje de empate
+            System.out.println("¡Los loros se rien de ti!");
+
             System.out.println();// Imprimimos una linea en blanco
 
         }
-        System.out.println("|Jugador|"+"               "+"|Rival|");// Mostramos los jugadores
+        System.out.println("|Puntuacion|");// Mostramos los jugadores
 
-        System.out.println("|   "+score + "   |               |  "+ enscore+"  |");// Mostramos la puntuación final
+        System.out.println("|   "+score + "     |");// Mostramos la puntuación final
 
-                
                 
         sc.close();// Cerramos el scanner
     }
