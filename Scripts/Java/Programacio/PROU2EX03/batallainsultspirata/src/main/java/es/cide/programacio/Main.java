@@ -5,6 +5,7 @@ package es.cide.programacio;
 
 import java.util.Scanner;//Importamos el scanner 
 import java.util.Random;//Importamos el random
+import java.util.InputMismatchException;;
 
 public class Main {
 
@@ -103,7 +104,7 @@ public class Main {
                 System.out.println();// Imprimimos una linea en blanco
             }
 
-        } catch (ClassCastException e) {// Si el usuario introduce un valor inusable, capturamos la excepcion
+        } catch (InputMismatchException e) {// Si el usuario introduce un valor inusable, capturamos la excepcion
 
             System.out.println();// Imprimimos una linea en blanco
 
