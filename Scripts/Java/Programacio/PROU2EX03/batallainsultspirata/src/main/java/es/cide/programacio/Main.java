@@ -3,8 +3,7 @@
 NIE: Y1723089N*/
 package es.cide.programacio;
 
-import java.util.Scanner;//Importamos el scanner
-import java.util.InputMismatchException;//Importamos la excepcion de input mismatch, al parecer no es necesario pero no he encontrado otra solución debido a que el scanner es de util y devuelve este error 
+import java.util.Scanner;//Importamos el scanner 
 import java.util.Random;//Importamos el random
 
 public class Main {
@@ -44,7 +43,7 @@ public class Main {
 
         boolean validRound; // Creamos una variable para asegurar que el numero de rondas sea valido
 
-        boolean playing = true;
+        boolean playing = true;// Creamos una variable para controlar si el jugador quiere seguir jugando
 
         //inicializamos los arrays
 
@@ -79,7 +78,7 @@ public class Main {
 
         System.out.println("¡Prepara tu espada y tu lengua, grumete! ¡Empieza la batalla de insultos pirata!");// Imprimimos un mensaje de inicio
 
-        System.out.println("Comprueba tu astucia diciendo la respuesta correcta.");
+        System.out.println("Comprueba tu astucia diciendo la respuesta correcta, elige bien y ganaras un punto, pero si pierdes demasiado, se acabo.");
 
         validRound = false;// Establecemos el valor predeterminado de la variable validRound
 
@@ -104,7 +103,7 @@ public class Main {
                 System.out.println();// Imprimimos una linea en blanco
             }
 
-        } catch (ClassCastException e) {// Si el usuario introduce in valor que no sea entero (int)
+        } catch (ClassCastException e) {// Si el usuario introduce un valor inusable, capturamos la excepcion
 
             System.out.println();// Imprimimos una linea en blanco
 
