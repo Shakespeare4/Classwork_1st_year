@@ -1,11 +1,11 @@
 /*Mateo WIlliam Carter Shakespeare
-20/10/2025
+24/10/2025
 NIE: Y1723089N*/
 package es.cide.programacio;
 
 import java.util.Scanner;//Importamos el scanner 
 import java.util.Random;//Importamos el random
-import java.util.InputMismatchException;;
+
 
 public class Main {
 
@@ -20,27 +20,31 @@ public class Main {
 
         int rounds = 0;// Creamos una variable para guardar el numero de rondas jugadas
 
-        int roundrequest = 0;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
+        char roundRequest;// Creamos una variable para guardar el numero de rondas que quiere jugar el usuario
 
-        int correctAnswerIndex;// Creamos una variable para guardar la respuesta correcta
+        int intRoundRequest = 0;// Creamos una variable para guardar el valor numerico del numero de rondas
+
+        int correctAnswer;// Creamos una variable para guardar la respuesta correcta
         
         boolean alreadyUsed;// Creamos una variable para guardar si esa respuesta ya se ha usado
 
         int count;// Creamos una variable de contador
 
-        int randIndex;// Creamos una variable para guardar la posicion aleatoria
+        int randomPos;// Creamos una variable para guardar la posicion aleatoria
 
-        int insultIndex;// Creamos una variable para la posicion del insulto usado
+        int insultPos;// Creamos una variable para la posicion del insulto usado
 
-        int swapIndex;// Creamos una variable para guardar la posicion temporal de una respuesta para poder intercambiarla de sitio 
+        int swapPos;// Creamos una variable para guardar la posicion temporal de una respuesta para poder intercambiarla de sitio 
 
         int temp;//Creamos otra variable para guardar el valor temporalmente durante el intercambio
 
-        int answer = 0;// Creamos una variable para guardar la respuesta del jugador
+        char answer = 0;// Creamos una variable para guardar la respuesta del jugador
+
+        int intAnswer=0;// Creamos una variable para guardar el valor numerico de la respuesta
 
         boolean validInput;// Creamos una variable para validar la entrada del usuario
 
-        int chosenIndex;// Creamos una variable para guardar la posicion de la respuesta elegida por el jugador
+        int chosenPos;// Creamos una variable para guardar la posicion de la respuesta elegida por el jugador
 
         boolean validRound; // Creamos una variable para asegurar que el numero de rondas sea valido
 
@@ -85,54 +89,57 @@ public class Main {
 
         while (!validRound){// Mientras validRound sea "false"
 
-        try{// usamos el try para probar el codigo
+            System.out.println("¿Cuantas rondas estas dispuesto a perder? (3, 5, 7 o 9)");// Preguntamos al usuario cuantas rondas quiere jugar
 
+        try{// capturamos que haya un numero valido
 
-            System.out.println("¿Cuantas rondas estas dispuesto a perder? (3 o 5)");// Preguntamos al usuario cuantas rondas quiere jugar
+            roundRequest = sc.next().charAt(0);// Guardamos la respuesta en la variable char
 
-            roundrequest = sc.nextInt();// Guardamos la respuesta en la variable
+            intRoundRequest = Character.getNumericValue(roundRequest);// Guardamos el valor numerico de nuestro char en un avariable int
 
-            if (roundrequest == 3 || roundrequest == 5){// Comprobamos que el numero de rondas sea 3 o 5
+            if (roundRequest == 'n'){// Si roundRequest es 'n' salimos del juego
+                playing = false;
+                validRound =true;
+
+            }
+
+            else if (intRoundRequest == 3 || intRoundRequest == 5|| intRoundRequest == 7|| intRoundRequest == 9){// Comprobamos que el numero de rondas sea 3 o 5
 
                 validRound = true;// si lo son, validRound es "true"
+
             } else {// De lo contrario
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                System.out.println("Ese numero no me suena, prueba otro >>(3 o 5)<<");// Imprimimos un mensaje de error
+                System.out.println("Ese numero no me suena, prueba otro >>(3, 5, 7 o 9)<<");// Imprimimos un mensaje de error
 
                 System.out.println();// Imprimimos una linea en blanco
+                validRound = false;
             }
+        }catch(IndexOutOfBoundsException e){
+            validRound = false;
 
-        } catch (InputMismatchException e) {// Si el usuario introduce un valor inusable, capturamos la excepcion
-
-            System.out.println();// Imprimimos una linea en blanco
-
-            System.out.println("¡Eso no es un número, grumete! ¿Es que no sabes contar?");// Imprimimos mensaje de error
-
-            System.out.println();// Imprimimos una linea en blanco
-
-            sc.nextLine(); 
         }
-    }
+        
 
         
         
 
-        while (rounds < roundrequest&& playing) {//Creamos un bucle que dure el numero de rondas que hemos puesto, en este caso 3
+        while (rounds < intRoundRequest&& playing) {//Creamos un bucle que dure el numero de rondas que ha introducido el usuario ademas de una condicion booleana de que este activo
             
             
             do {// Elegimos un insulto aleatorio que no se haya usado, usamos do while para asegurarnos de que se cumple la condicion y queremos que el insulto se elija aleatoriamente
 
-                insultIndex = ra.nextInt(insults.length);// Le damos el valor de una posicion aleatoria de array
-            } while (insultUsed[insultIndex]);
+                insultPos = ra.nextInt(insults.length);// Le damos el valor de una posicion aleatoria de array
 
-            insultUsed[insultIndex] = true;  // Marcamos esta respuesta como usada
+            } while (insultUsed[insultPos]);
 
-            correctAnswerIndex = insultIndex;// preparamos la respuesta correcta
+            insultUsed[insultPos] = true;  // Marcamos esta respuesta como usada
+
+            correctAnswer = insultPos;// preparamos la respuesta correcta
 
 
-            options[0] = correctAnswerIndex;// Ponemos la respuesta correcta en la primera posicion del array "options"
+            options[0] = correctAnswer;// Ponemos la respuesta correcta en la primera posicion del array "options"
 
             count = 1;// Le damos valor 1 al contador porque ya tenemos una opcion en el array
 
@@ -140,13 +147,13 @@ public class Main {
             
             while (count < 3) {// Llenamos el array "options" con 2 respuestas incorrectas diferentes
 
-                randIndex = ra.nextInt(comebacks.length);
+                randomPos = ra.nextInt(comebacks.length);
 
                 alreadyUsed = false;
 
                 for (int j = 0; j < count && !alreadyUsed; j++) {// Comprobamos que la respuesta no se haya usado ya
 
-                if (options[j] == randIndex) {
+                if (options[j] == randomPos) {
 
                         alreadyUsed = true;
                 }
@@ -154,7 +161,7 @@ public class Main {
 
                 if (!alreadyUsed) {// Si no se ha usado, la añadimos al array
 
-                    options[count] = randIndex;
+                    options[count] = randomPos;
 
                     count++;
                 }
@@ -163,13 +170,13 @@ public class Main {
 
             for (int i = 0; i < options.length; i++) {// Mezclamos las opciones para que la respuesta correcta no esté siempre en la misma posición
 
-                swapIndex = ra.nextInt(options.length);// Guardamos una posicion aleatoria en swapIndex
+                swapPos = ra.nextInt(options.length);// Guardamos una posicion aleatoria en swapPos
 
-                temp = options[i];// Guardamos la posicion de i en temp
+                temp = options[i];// Guardamos la posicion "i" en temp
 
-                options[i] = options[swapIndex];// Cambiamos la posicion de i por la de swapIndex
+                options[i] = options[swapPos];// Cambiamos la posicion de "i" por la de swapPos
 
-                options[swapIndex] = temp;// Cambiamos la posicion de swapIndex por la de temp
+                options[swapPos] = temp;// Cambiamos la posicion de swapPos por la de temp
             }
 
             
@@ -177,7 +184,7 @@ public class Main {
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println(">> " + insults[insultIndex]);// Mostramos el insulto
+            System.out.println(">> " + insults[insultPos]);// Mostramos el insulto
 
             System.out.println();// Imprimimos una linea en blanco
 
@@ -193,38 +200,42 @@ public class Main {
 
             validInput = false;// Reiniciamos la variable de validacion
 
-        while (!validInput) {// Validamos el input del usuario 
+            while (!validInput) {// Validamos el input del usuario 
 
                 System.out.print("Elige tu respuesta (1-3): ");// Pedimos la respuesta al usuario
 
                 System.out.println();// Imprimimos una linea en blanco
+                try{
 
-                answer = sc.nextInt();// Guardamos la respuesta en la variable
+                answer = sc.next().charAt(0);// Guardamos la respuesta en la variable char
 
-                if (answer >= 1 && answer <= 3) {// Comprobamos que la respuesta este entre 1 y 3
+                if (answer=='n'){// si el character introducido es 'n', salimos del bucle
 
-                validInput = true;//establecemos la variable como true para detener el while
+                    playing = false;
 
-        }else if (answer == Character.getNumericValue('n') ){
-            playing = false;
-        }
-        
-        
-        else {
+                    validInput = true;
 
-            System.out.println(); // Imprimimos una linea en blanco
+                    }else{//de lo contrario 
 
-            System.out.println("¡Ese numero no existe! Los piratas solo contamos del 1 al 3.");// Imprimimos mensaje de error
+                    intAnswer = Character.getNumericValue(answer);// guardamos el valor numerico del character
 
-            System.out.println();// Imprimimos una linea en blanco
+                    if (intAnswer >= 1 && intAnswer <= 3) {// Comprobamos que la respuesta este entre 1 y 3
 
-        }
-    
-}
+                        validInput = true;//establecemos la variable como true para detener el while
 
-            chosenIndex = options[answer - 1];// Guardamos la posicion de la respuesta elegida por el jugador
+                    }else {// de lo contrario
 
-            if (chosenIndex == correctAnswerIndex) {// Comprobamos si la respuesta elegida es la correcta
+                        System.out.println(); // Imprimimos una linea en blanco
+
+                        System.out.println("¡Ese numero no existe! Los piratas solo contamos del 1 al 3.");// Imprimimos mensaje de error
+
+                        System.out.println();// Imprimimos una linea en blanco
+
+                    }
+                
+            chosenPos = options[intAnswer-1];// Guardamos la posicion de la respuesta elegida por el jugador
+                
+            if (chosenPos == correctAnswer) {// Comprobamos si la respuesta elegida es la correcta
 
                 System.out.println();// Imprimimos una linea en blanco
 
@@ -242,21 +253,34 @@ public class Main {
 
                 System.out.println();// Imprimimos una linea en blanco
 
-                score--;
-
-
-            }if (score == -1){
+                score--;// restamos un punto al jugador
+            }
+            
+                
+            }
+            }catch (IndexOutOfBoundsException e){
+                validInput = false;
+            }
+            }if (score == -1){// si la puntuacion del jugador llega a -1 le indicamos que ha perdido y le pedimos si quiere volver a intentarlo
                 System.out.print("¡Has muerto, seras comida de gaviota! Lo quieres volver a intentar?");
                 
                 System.out.println("1- Si      2-No");
 
-                answer = sc.nextInt();
-                if (answer == 1){
-                    playing = true;
-                }else if (answer ==2){
-                    playing = false;
-                }else {
-                    System.out.println("Elige un numero valido");
+                intAnswer = sc.nextInt();// sobreescribimos intAnswer con el siguiente input
+
+                if (intAnswer == 1){// si es igual a 1
+
+                    playing = true;// se repite el bucle
+                    rounds = -1;//bajamos el numero de rondas a -1 para que cuando se sume la siguiente vuelve a la primera
+
+                }else if (intAnswer ==2){// si es igual a 2
+                    
+                    playing = false;// sale del bucle
+                    
+
+                }else {// de lo contrario
+
+                    System.out.println("Elige un numero valido");// imprimimos un mensaje de error
                 }
             
             
@@ -268,33 +292,27 @@ public class Main {
             
         }
 
-        System.out.println();// Imprimimos una linea en blanco
-    
-        System.out.println("¡La batalla ha terminado, grumete!");// Imprimimos un mensaje de fin de batalla
-        
-        System.out.println();// Imprimimos una linea en blanco
-
-        if (score == roundrequest) {
+        if (score == intRoundRequest) {// si la puntuacion es igual a las rondas jugadas (puntuacion maxima)
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("¡Eres el rei de los piratas!");// Si el jugador tiene más puntos, imprimimos un mensaje de victoria
+            System.out.println("¡Eres el rei de los piratas!");// imprimimos un mensaje de enhorabuena
         
             System.out.println();// Imprimimos una linea en blanco
 
-        } else if ( score > roundrequest/2){
+        } else if ( score > intRoundRequest/2){//de lo contrario, si es mayor a la mitad de las rondas 
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("Te has defendido como un buen marinero");
+            System.out.println("Te has defendido como un buen marinero");// imprimimos un mensaje menos entusiasmado
         
             System.out.println();// Imprimimos una linea en blanco
 
-        } else if (score <= roundrequest/2) {
+        } else if (score <= intRoundRequest/2) {// de lo contrario si es menor a la mitad de rondas jugadas
 
             System.out.println();// Imprimimos una linea en blanco
 
-            System.out.println("¡Los loros se rien de ti!");
+            System.out.println("¡Los loros se rien de ti!");// imprimimos un mensaje de desprecio
 
             System.out.println();// Imprimimos una linea en blanco
 
@@ -303,7 +321,6 @@ public class Main {
 
         System.out.println("|   "+score + "     |");// Mostramos la puntuación final
 
-                
-        sc.close();// Cerramos el scanner
+    }sc.close();// Cerramos el scanner
     }
 }
