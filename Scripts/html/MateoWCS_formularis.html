@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cat">
+    <head>
+        <style>
+        form label { display: block;}
+        form button { display: block; width: 100%; max-width: 300px;}
+        </style>
+        <title>Formulari mateo</title>
+        <body>
+            <header>
+                <b>Formulari</b>
+            </header>
+        <form action="MateoWCS_formularis.html" method="post">
+        <label>Nom:
+            <input type="text" id="name" name="name" placeholder="nom" required>
+        </label>
+        
+        <label>Edat:
+            
+            <input type="number" id="age" name="age" placeholder="edat" required min="18" max="120">
+        </label>
+        <label>Correu:
+            <input type="email" id="email" name="email" placeholder="correu"required>
+        </label>
+        <label>Contrasenya: 
+            <input type="password" id="contrasenya" name="contrasenya" required  minlength= "6" maxlength="18" placeholder="contrasenya">
+        </label>
+        <label> Consoles:</label>
+            <select name="consoles" multiple size="9">
+            <optgroup label="Casa">
+                <option> PS5</option>
+                <option> Xbox Series X</option>
+                <option> Xbox Series S</option>
+            </optgroup>
+            <optgroup label= "Portable">
+                <option> Nintendo Switch 2</option>
+                <option> Nintendo Switch Lite</option>
+                <option> Steam Deck</option>
+            </optgroup>
+            </select>
+        <label> Llengua: </label>
+            <input type="radio" id="castella" name="idioma" value="castella">Castella
+            <input type="radio"id="catala" name="idioma" value="catala">Catala
+            <input type="radio" id="catala" name="idioma" value="angles">Angles
+        
+        <label>Accepto els termes i condicions
+            <input type="checkbox" id="termesicondicions" name="termesicondicions">
+        </label>
+        <label>Comentaris: 
+            <textarea name="comentaris" cols="50" rows="7" placeholder="Comentaris"></textarea>
+        </label>
+        <input type="submit"action>
+        
+        
+        </form>
