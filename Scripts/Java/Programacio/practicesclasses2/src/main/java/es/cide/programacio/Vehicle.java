@@ -8,24 +8,35 @@ public class Vehicle {
     int cuentkm;
     double combustible;
     double consumo;
+    double range;
+    double distanciamax;
     String tipocombustible;
     double autonomiatotal;
     
     //constructor
-    public Vehicle(int peso2, int plazas2, int ocupantes2, double combustible2, double consumo2){
-        this.peso = peso2;
-        this.plazas = plazas2;
-        this.ocupantes = ocupantes2;
-        this.combustible = combustible2;
-        this.consumo = consumo2;
+    public Vehicle(int peso, int plazas, int ocupantes, double consumo, double combustible, String tipocombustible){
+        this.peso = peso;
+        this.plazas = plazas;
+        this.ocupantes = ocupantes;
+        this.combustible = combustible;
+        this.tipocombustible = tipocombustible;
+        this.consumo = consumo;
     }
 
-    // metodos
+    // metodoss
     public double range(){
-        while (combustible > 0){
-            combustible = combustible-consumo;
-            cuentkm = cuentkm + 100;
-        }
-        return cuentkm;
+            range = combustible*consumo;
+            return range;
+        
+    }
+    public int addocupantes(){
+        
+        ocupantes++;
+        return ocupantes;
+    }
+    public int removeocupantes(){
+        if (ocupantes <= plazas){
+        ocupantes--;}
+        return ocupantes;
     }
 }
