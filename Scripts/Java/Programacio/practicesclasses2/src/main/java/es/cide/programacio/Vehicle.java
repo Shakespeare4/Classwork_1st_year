@@ -25,7 +25,7 @@ public class Vehicle {
 
     // metodoss
     public double range(){
-            range = combustible*consumo;
+            range = combustible/consumo*100;
             return range;
         
     }
