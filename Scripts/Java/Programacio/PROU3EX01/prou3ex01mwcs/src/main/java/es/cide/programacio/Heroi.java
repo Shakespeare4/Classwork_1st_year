@@ -5,7 +5,7 @@ public class Heroi {
     private String nom = "Guybrush ";
     private int vida = 10;
     private boolean alive = true;
-    private String response;
+    private int response;
     //getters
     public String getnomheroi(){
         return nom;
@@ -21,8 +21,8 @@ public class Heroi {
 
     //metodes
 
-    public String defensar(){
-        this.response = sc.nextLine();
+    public int defensar(){
+        this.response = sc.nextInt();
         return response;
     }
 

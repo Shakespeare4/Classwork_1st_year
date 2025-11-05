@@ -11,4 +11,4 @@ public class ejercicio2 {
             length--;
         }sc.close();
     } 
-}
+} 

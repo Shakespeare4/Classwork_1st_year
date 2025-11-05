@@ -8,9 +8,19 @@ public class Illa {
 
     public Illa(){
         for(int i = 0; i< length; i++){
-            illa[i] = new Pirata();
-
+            Pirata insertPirata = new Pirata(nom, nom, nom);
+            illa[i] = insertPirata;
         }
+    }
+
+    public int getLongitudIlla(){
+        return illa.length;
+    }
+
+    public Pirata vullUnPirata(int index){
+        return illa[index];
+
+        
     }
 
 }
