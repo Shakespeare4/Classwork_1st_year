@@ -6,7 +6,7 @@ public class Main {
         Illa carib = new Illa();
         int illaLongitud = carib.getLongitudIlla();
         boolean playerIsAlive = Guybrush.getestatheroi();
-
+        int c =0;
         boolean pirateIsAlive;
         while (playerIsAlive && illaLongitud > 0) {
             Pirata roundPirate = new Pirata();
@@ -18,8 +18,7 @@ public class Main {
             } else if (playerIsAlive == false) {
                 System.out.println("Guybrush cae y su alma se reúne con el resto de sueños rotos");
             }
-            while (playerIsAlive && pirateIsAlive) {
-
+            while (playerIsAlive && pirateIsAlive && c<3) {
                 String roundInsult = roundPirate.insultar();
                 int roundInsultIndex = roundPirate.getInsultIndex();
                 Guybrush.setIndexInsult(roundInsultIndex);
@@ -34,7 +33,7 @@ public class Main {
                 }
                 playerIsAlive = Guybrush.getestatheroi();
                 pirateIsAlive = roundPirate.getestatpirata();
-
+                c++;
             }
             illaLongitud--;
 
