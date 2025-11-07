@@ -7,8 +7,9 @@ public class Pirata {
     // private String nom;
     private String insults[] = new String[3];
     private int vida = ra.nextInt(1, 3);
-    private int insultindex = ra.nextInt(3);
+    private int insultindex;
     private boolean alive = true;
+    private int original1, original2, original, original3;
     private String[] insultOptions = {
             "¡Eres tan repulsivo como un mono en lencería!",
             "¡Luchas como un granjero!",
@@ -35,12 +36,16 @@ public class Pirata {
     // constructor
     public Pirata() {
         do {
-            this.insults[0] = insultOptions[ra.nextInt(9)];
-            this.insults[1] = insultOptions[ra.nextInt(9)];
-            this.insults[2] = insultOptions[ra.nextInt(9)];
-        } while (this.insults[0].equals(this.insults[1])
-                || this.insults[0].equals(this.insults[2])
-                || this.insults[1].equals(this.insults[2]));
+            original = ra.nextInt(9);
+            original2 = ra.nextInt(9);
+            original1 = ra.nextInt(9);
+        } while (this.original ==(this.original1)
+                || this.original ==(this.original2)
+                || this.original1 == (this.original2));
+        insults[0] = insultOptions[original];
+        insults[1] = insultOptions[original1];
+        insults[2] = insultOptions[original2];
+
     }
 
     //
@@ -54,12 +59,21 @@ public class Pirata {
 
     // metodes
     public String insultar() {
+        insultindex= ra.nextInt(3);
+        if(insults[insultindex] ==insultOptions[original]){
+            original3 = original;
+        }else if (insults[insultindex] ==insultOptions[original1]){
+            original3= original1;
+        }else if(insults[insultindex] ==insultOptions[original2]){
+            original3 = original2;
+        }
         return insults[insultindex];
+
 
     }
 
     public boolean replica(String response) {
-        if (response.equals(insults[insultindex])) {
+        if (response.equals(comebackOptions[original3])) {
             return true;
         } else {
             return false;
@@ -78,3 +92,4 @@ public class Pirata {
     }
 
 }
+
