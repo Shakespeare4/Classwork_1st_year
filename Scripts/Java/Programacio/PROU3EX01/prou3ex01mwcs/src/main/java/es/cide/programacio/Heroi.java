@@ -1,20 +1,16 @@
 package es.cide.programacio;
 
-import java.util.Scanner;
-import java.util.Random;
+import java.util.Scanner;//importamos la clase Scanner
 
 public class Heroi {
+    // atributos
     private Scanner sc = new Scanner(System.in);
-    private Random ra = new Random();
-    private String nom = "Guybrush ";
-    private int vida = 10;
-    private boolean alive = true;
+    private String nom;
+    private int vida;
+    private boolean alive;
     private int response;
-    private int insultPirata;
-    private int c;
     int option1, option2, option3;
-    private String comebacks[] = new String[9];
-    private String[] comebackOptions = {
+    private String[] comebackOptions = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
             "¡Suerte que tú peleas como una vaca!",
             "¡Me alegra que fueras a tu reunión familiar!",
@@ -26,29 +22,28 @@ public class Heroi {
             "¡Tu me haces pensar que alguien ya lo hizo!"
     };
 
+    // constructor
+    public Heroi() {
+        this.vida = 10;// inicializamos la vida como 10
+        this.alive = true;// inicializamos el estado como vivo
 
-    // getters
-    public String getnomheroi() {
-        return nom;
     }
 
-    public boolean getestatheroi() {
+    // getters
+
+    public boolean getestatheroi() {// para pedir el estado del heroe
         return alive;
     }
 
-
     // setters
-    public void setnomheroi(String newnom) {
+    public void setnomheroi(String newnom) {// para cambiar el nombre del heroe
         this.nom = newnom;
     }
-    public void setIndexInsult(int index){
-        this.insultPirata = index;
-    }
-
 
     // metodes
 
-    public String defensar() {
+    public String defensar() {// para imprimir las opciones y devolver el resultado
+        System.out.println("¿Cual es tu respuesta?");
         System.out.println("1 " + comebackOptions[0]);
         System.out.println("2 " + comebackOptions[1]);
         System.out.println("3 " + comebackOptions[2]);
@@ -58,11 +53,12 @@ public class Heroi {
         System.out.println("7 " + comebackOptions[6]);
         System.out.println("8 " + comebackOptions[7]);
         System.out.println("9 " + comebackOptions[8]);
-        this.response = sc.nextInt();
-        return comebackOptions[response-1];
+        System.out.println();
+        this.response = sc.nextInt();// pedimos la respuesta
+        return comebackOptions[response - 1];// pasamos el valor correspondiente del array
     }
 
-    public boolean vida() {
+    public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
         this.vida--;
         if (vida > 0) {
             this.alive = true;
