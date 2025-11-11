@@ -6,11 +6,9 @@ public class Heroi {
     // atributos
     private Scanner sc = new Scanner(System.in);
     private String nom;
-    private int vida;
-    private boolean alive;
-    private int response;
-    int option1, option2, option3;
-    private String[] comebackOptions = { // creamos un array con las posibles respuestas
+    private boolean hViu;
+    int opcio1, opcio2, opcio3, resposta, vida;
+    private String[] opcionsResposta = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
             "¡Suerte que tú peleas como una vaca!",
             "¡Me alegra que fueras a tu reunión familiar!",
@@ -23,16 +21,16 @@ public class Heroi {
     };
 
     // constructor
-    public Heroi() {
+    public Heroi(String nouNom) {
         this.vida = 10;// inicializamos la vida como 10
-        this.alive = true;// inicializamos el estado como vivo
-
+        this.hViu = true;// inicializamos el estado como vivo
+        this.nom = nouNom; // inicializamos el nombre como el introducido
     }
 
     // getters
 
     public boolean getestatheroi() {// para pedir el estado del heroe
-        return alive;
+        return hViu;
     }
 
     // setters
@@ -43,28 +41,28 @@ public class Heroi {
     // metodes
 
     public String defensar() {// para imprimir las opciones y devolver el resultado
-        System.out.println("¿Cual es tu respuesta?");
-        System.out.println("1 " + comebackOptions[0]);
-        System.out.println("2 " + comebackOptions[1]);
-        System.out.println("3 " + comebackOptions[2]);
-        System.out.println("4 " + comebackOptions[3]);
-        System.out.println("5 " + comebackOptions[4]);
-        System.out.println("6 " + comebackOptions[5]);
-        System.out.println("7 " + comebackOptions[6]);
-        System.out.println("8 " + comebackOptions[7]);
-        System.out.println("9 " + comebackOptions[8]);
+
+        System.out.println("1 " + opcionsResposta[0]);
+        System.out.println("2 " + opcionsResposta[1]);
+        System.out.println("3 " + opcionsResposta[2]);
+        System.out.println("4 " + opcionsResposta[3]);
+        System.out.println("5 " + opcionsResposta[4]);
+        System.out.println("6 " + opcionsResposta[5]);
+        System.out.println("7 " + opcionsResposta[6]);
+        System.out.println("8 " + opcionsResposta[7]);
+        System.out.println("9 " + opcionsResposta[8]);
         System.out.println();
-        this.response = sc.nextInt();// pedimos la respuesta
-        return comebackOptions[response - 1];// pasamos el valor correspondiente del array
+        this.resposta = sc.nextInt();// pedimos la respuesta
+        return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
     }
 
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
         this.vida--;
         if (vida > 0) {
-            this.alive = true;
+            this.hViu = true;
         } else {
-            this.alive = false;
+            this.hViu = false;
         }
-        return alive;
+        return hViu;
     }
 }

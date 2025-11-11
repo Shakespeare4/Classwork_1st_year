@@ -7,30 +7,32 @@ public class Illa {
     private Random ra = new Random();
     private String nom;
     private Pirata illa[];
-    private int length;
+    private Pirata pirataIntroduit;
+    private int longIlla;
     private String[] nameOptionsPirata = { // creamos un array con los posibles nombres de pirata
             "John pirata",
-            "Babraverde",
+            "Largo LaGrande",
             "Jerry el Gallego",
             "Antonio Matapulpos",
             "Eustaquio el iluminado",
-            "David Juanes",
+            "LeChuck",
             "Xim el bufagaites"
     };
     private String[] nameOptionsIlla = { // creamos un array con los posibles nombres de isla
-            "La isla de las tinieblas",
-            "Ibiza",
-            "Sta Helena"
+            "Mêlée",
+            "Booty",
+            "Scabb",
+            "Monkey Island"
     };
 
     // Constructor
     public Illa() {
         this.illa = new Pirata[ra.nextInt(2, 8)];// inicializamos el tamaño de la isla
-        this.length = illa.length;// guardamos la longitud del array en una variable
-        this.nom = nameOptionsIlla[ra.nextInt(3)];// elegimos un nombre aleatorio de nuestras pciones
-        for (int i = 0; i < length; i++) {// llenamos cada posición del aray illa con un pirata nuevo
-            Pirata insertPirata = new Pirata(nameOptionsPirata[ra.nextInt(7)]);// cada pirata tiene un nombre aleatorio
-            illa[i] = insertPirata;
+        this.longIlla = illa.length;// guardamos la longitud del array en una variable
+        this.nom = nameOptionsIlla[ra.nextInt(4)];// elegimos un nombre aleatorio de nuestras pciones
+        for (int i = 0; i < longIlla; i++) {// llenamos cada posición del aray illa con un pirata nuevo
+            pirataIntroduit = new Pirata(nameOptionsPirata[ra.nextInt(7)]);// cada pirata tiene un nombre aleatorio
+            illa[i] = pirataIntroduit;
         }
     }
 
@@ -44,7 +46,7 @@ public class Illa {
     }
 
     // metodos
-    public Pirata vullUnPirata(int index) {// para pedirun pirata dentro de illa
+    public Pirata vullUnPirata(int index) {// para pedir un pirata dentro de illa
         return illa[index];
 
     }
