@@ -9,15 +9,7 @@ public class Illa {
     private Pirata illa[];
     private Pirata pirataIntroduit;
     private int longIlla;
-    private String[] nameOptionsPirata = { // creamos un array con los posibles nombres de pirata
-            "John pirata",
-            "Largo LaGrande",
-            "Jerry el Gallego",
-            "Antonio Matapulpos",
-            "Eustaquio el iluminado",
-            "LeChuck",
-            "Xim el bufagaites"
-    };
+
     private String[] nameOptionsIlla = { // creamos un array con los posibles nombres de isla
             "Mêlée",
             "Booty",
@@ -31,7 +23,7 @@ public class Illa {
         this.longIlla = illa.length;// guardamos la longitud del array en una variable
         this.nom = nameOptionsIlla[ra.nextInt(4)];// elegimos un nombre aleatorio de nuestras pciones
         for (int i = 0; i < longIlla; i++) {// llenamos cada posición del aray illa con un pirata nuevo
-            pirataIntroduit = new Pirata(nameOptionsPirata[ra.nextInt(7)]);// cada pirata tiene un nombre aleatorio
+            pirataIntroduit = new Pirata();// cada pirata tiene un nombre aleatorio
             illa[i] = pirataIntroduit;
         }
     }

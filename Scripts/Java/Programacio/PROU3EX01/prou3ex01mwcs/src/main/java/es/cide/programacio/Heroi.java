@@ -7,7 +7,7 @@ public class Heroi {
     private Scanner sc = new Scanner(System.in);
     private String nom;
     private boolean hViu;
-    int opcio1, opcio2, opcio3, resposta, vida;
+    private int opcio1, opcio2, opcio3, resposta, vida;
     private String[] opcionsResposta = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
             "¡Suerte que tú peleas como una vaca!",

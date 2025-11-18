@@ -6,9 +6,8 @@ public class Pirata {
     private Random ra = new Random();// inicializamos el random
     private String nom;
     private String[] insults;
-    private int vida;
     private boolean pViu;
-    private int insultOriginal1, insultOriginal2, insultOriginal3, posicioOriginal, posInsult;
+    private int insultOriginal1, insultOriginal2, insultOriginal3, posicioOriginal, posInsult, vida, nomAleatori;
     private String[] opcionsInsult = { // creamos un array con las posibles insultos
             "¡Eres tan repulsivo como un mono en lencería!",
             "¡Luchas como un granjero!",
@@ -31,10 +30,27 @@ public class Pirata {
             "Si las hay, solo que nunca las aprendiste.",
             "¡Tu me haces pensar que alguien ya lo hizo!"
     };
-
+        private String[] opcionsNomPirata = { // creamos un array con los posibles nombres de pirata
+            "John pirata",
+            "Largo LaGrande",
+            "Jerry el Gallego",
+            "Antonio Matapulpos",
+            "Eustaquio el iluminado",
+            "LeChuck",
+            "Oriol el bufagaites",
+            "Jacobo Gorrión",
+            "Gato Pirata"
+    };
+    boolean[] nomUsat = new boolean[9];//Creamos un array booleano para guardar si el nombre se ha utilizado 
+    boolean[] insultUsat = new boolean[3];
     // constructor
-    public Pirata(String nomPirata) {
-        this.nom = nomPirata;// asignamos el valor del parametro al atributo nombre
+    public Pirata() {
+        do{
+        nomAleatori = ra.nextInt(opcionsNomPirata.length);
+        this.nom = opcionsNomPirata[nomAleatori];// asignamos el valor del parametro al atributo nombre
+        nomUsat[nomAleatori] = true;
+        }while(!nomUsat[nomAleatori]);
+        nomUsat[nomAleatori] = true;
         insults = new String[3];// inicializamos el array de insultos
         vida = ra.nextInt(1, 3);// inicializamos la vida con un valor aleatorio entre 1 y 3
         pViu = true;// inicializamos el estado como vivo
@@ -56,7 +72,6 @@ public class Pirata {
 
     //getters
 
-
     public boolean getestatpirata() {// para pedir el estado del pirata
         return this.pViu;
     }
@@ -67,7 +82,11 @@ public class Pirata {
 
     // metodes
     public String insultar() {//para devolver un insulto aleatorio y guardar su posicion original
+        do{
         posInsult = ra.nextInt(3);
+        insultUsat[posInsult] = true;
+        }while(!insultUsat[posInsult]);
+        
         if (insults[posInsult] == opcionsInsult[insultOriginal1]) {
             posicioOriginal = insultOriginal1;
         } else if (insults[posInsult] == opcionsInsult[insultOriginal2]) {

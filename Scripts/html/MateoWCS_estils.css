@@ -1,0 +1,13 @@
+*{
+    background-color: rgb(177, 253, 253);
+}
+@import url( https://fonts.google.com/specimen/Rubik);
+h1,h2{
+    font-family: "Rubik";
+}
+.colorVerd{
+    color:green;
+}
+#facebook{
+    text-decoration-line: line-through;
+}
