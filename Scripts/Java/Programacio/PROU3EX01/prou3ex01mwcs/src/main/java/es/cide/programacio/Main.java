@@ -1,3 +1,6 @@
+//Nom: MAteo WIlliam Carter Shakespeare
+//NIE: Y1723089N
+//Data entrega: 21/11/2025
 package es.cide.programacio;
 
 import java.util.Scanner;//importamos la clase Scanner
