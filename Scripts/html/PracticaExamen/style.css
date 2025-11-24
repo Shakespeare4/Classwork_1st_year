@@ -1,0 +1,37 @@
+*{
+    font-family: arial;
+}
+
+
+
+h1, h2{
+    color: #2e7d32;
+}
+
+input{
+    border-color:#a5d6a7;
+    border-radius: 5px;
+}
+table{
+    text-align: center;
+}
+tbody{
+    text-align: right;
+    
+
+}
+thead{
+    color:white;
+    background-color: #2e7d32;
+}
+button{
+    height: 30px;
+    width: 600px;
+    border-radius: 5px;
+    border-width: 0;
+    color:white;
+    background-color: #2e7d32;
+}
+button:hover{
+    background-color:#388e3c;
+}
