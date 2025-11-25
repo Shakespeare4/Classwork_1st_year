@@ -1,27 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"></style>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica Examen</title>
 </head>
-<body>
+<header> 
     <h1 id="title">Llibreria CIDE</h1>
     <h2>Valoració del llibre finalista del Premi Planeta 2025</h2>
     <p>En aquesta pàgina pots consultar la informació sobre el llibre finalista de Premi Planeta 2025 i deixar la teva valoració com a lector o lectora</p>
-    <h2>Deixa la teva valoració</h2>
-    <form action="gracies.html">
-        <p>Nom:</p>
-        <input type="text" required>
-        <p>Correu Electrònic</p>
-        <input type="email" required>
-        <p>Valoració (1 = Molt Dolenta 5 = Excel·lent):</p>
-        <input type="range" min="1" max="5"  ></meter>
-        <p>La teva opinió:</p>
-        <textarea rows="7" cols="82" ></textarea>
-        <p><button target="self" > Enviar valoració</button></p>
-        <form>
+</header>
+<body>
+    <section id="desplegable">
+        <details>
+            <summary><strong>Veure informació sobre el llibre finalista</strong></summary>
+                <p><strong> Titol: </strong> Cuando el viento hable.</p>
+                <p><strong>Autora: </strong> Angela Banzas</p>
+                <p><strong> Premi: </strong> Finalista Premi Planeta 2025</p>    
+                <p><strong>Descripció: </strong> Novel·la ambientada a la Galicia rural que explora que explora secrets familiars
+                    i memòria col·lectiva a través de la història d'una nina nascuda a la postguerra i criada pels seus avis</p>
+        </details>
+    </section>
+    <section>
+        <h2>Deixa la teva valoració</h2>
+        
+        <form action="gracies.html" method="post" target="self" >
+        <p>
+            <label for="nom">
+                Nom:
+            </label>
+            
+                <input type="text" name="nom" required>
+            </p>
+        
+        
+        <p>
+            <label>
+                Correu Electrònic:
+            </label>
+                <input type="email" required>
+            
+        </p>
+        
+        <p>
+            <label>
+            Valoració (1 = Molt Dolenta 5 = Excel·lent):
+            </label>
+            <input type="range" min="1" max="5">
+            
+        </p>
+        
+    
+        <p><label>La teva opinió:</label>
+        
+        </p>
+        <textarea rows="7" cols="84" ></textarea>
+        <p><button type="submit"> Enviar valoració</button></p>
+    </form>
+    </section>
+    <section>
         <h2> Valoració d'altres lectors</h2>
         <table>
             <thead>
@@ -45,7 +83,13 @@
                 <tr>
                     <td>Sofia</td>
                     <td>3</td>
-                    <td>Interessamt, però el final m'ha deixat freda</td>
+                    <td>Interessant, però el final m'ha deixat freda</td>
                 </tr>
+                </tbody>
+                </table>
+                </section>
     </body>
+    <footer>
+        <p>&copy; CIDE 2025</p>
+    </footer>
 </html>
