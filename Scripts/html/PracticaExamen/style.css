@@ -1,86 +1,83 @@
-*{
-    font-family: arial;
+* {
+  font-family: arial;
 }
-body{
-    background-color: aliceblue;
-    margin:0;
-    padding:50px;
-}
-
-
-h1, h2{
-    color: #2e7d32;
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 50px;
 }
 
-input{
-    border-color: #8bc34a;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    width: 75%;
-    height: 30px;
-}
-input[type=range]{
-    width: 40%;
+h1,
+h2 {
+  color: #2e7d32;
 }
 
-
-table{
-    border-collapse: collapse;
-    width: 75%;
+input {
+  border-color: #8bc34a;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  width: 75%;
+  height: 30px;
+}
+input[type="range"] {
+  width: 40%;
 }
 
-thead{
-    color:white;
-    background-color: #2e7d32;
-    border-style: none;
-    height: 30px;
-}
-section, header, footer{
-    box-shadow: 0 2px 6px rgb(179, 179, 182);
-    border-radius: 8px;
-    background-color: #fff;
-
+table {
+  border-collapse: collapse;
+  width: 75%;
 }
 
-
-
-textarea{
-    width:75%;
-    border-color: #8bc34a;
-    border-radius: 6px;
+thead {
+  color: white;
+  background-color: #2e7d32;
+  border-style: none;
+  height: 30px;
+}
+section,
+header,
+footer {
+  box-shadow: 0 2px 6px rgb(179, 179, 182);
+  border-radius: 8px;
+  background-color: #fff;
 }
 
-button{
-    height: 30px;
-    width: 75%;
-    border-radius: 8px;
-    border-width: 0;
-    color:white;
-    background-color: #2e7d32;
-    font-weight: bold;
-}
-button:hover{
-    background-color:#388e3c;
-}
-details{
-    background-color: #a5d6a7;
-    border-color: #2e7d32;
-    border-radius: 8px;
-    border-style: solid;
-    border-width: 1px;
-        padding: 10px;
-        margin: 0;
-
+textarea {
+  width: 75%;
+  border-color: #8bc34a;
+  border-radius: 6px;
 }
 
-tbody>tr>td{
-    border-style: solid;
-    border-width: 1px;
-    border-color: lightgray;
-    height: 30px;
-    background-color: aliceblue;
+button {
+  height: 30px;
+  width: 75%;
+  border-radius: 8px;
+  border-width: 0;
+  color: white;
+  background-color: #2e7d32;
+  font-weight: bold;
 }
-label{
-    display: block;
+button:hover {
+  background-color: #388e3c;
+}
+details {
+  background-color: #a5d6a7;
+  border-color: #2e7d32;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin: 0;
+}
+
+tbody > tr > td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  height: 30px;
+  background-color: aliceblue;
+}
+label {
+  display: block;
 }
