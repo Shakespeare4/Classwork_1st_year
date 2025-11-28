@@ -5,7 +5,7 @@ import java.util.Random;
 import javax.swing.*;
 
 public class FlappyBird extends JPanel implements ActionListener, KeyListener {
-    int boardWidth = 360;
+    int boardWidth = 720;
     int boardHeight = 640;
 
     //images
@@ -117,10 +117,12 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
 		super.paintComponent(g);
 		draw(g);
 	}
-
+    
 	public void draw(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
         //background
         g.drawImage(backgroundImg, 0, 0, this.boardWidth, this.boardHeight, null);
+ 
 
         //bird
         g.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height, null);
@@ -130,9 +132,14 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
             Pipe pipe = pipes.get(i);
             g.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height, null);
         }
-
+        //text-bg
+        g2.setColor(new Color(255,255,255));
+        g2.fillRect(10, 8, 200, 30);
         //score
-        g.setColor(Color.GREEN);
+        Color text = new Color(28, 103, 32);
+        g.setColor(text);
+
+        
         g.setFont(new Font("Arial", Font.PLAIN, 32));
         if (gameOver) {
             g.drawString("Game Over: " + String.valueOf((int) score), 10, 35);
