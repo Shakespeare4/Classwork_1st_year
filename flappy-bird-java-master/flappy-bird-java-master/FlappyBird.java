@@ -5,7 +5,7 @@ import java.util.Random;
 import javax.swing.*;
 
 public class FlappyBird extends JPanel implements ActionListener, KeyListener {
-    int boardWidth = 720;
+    int boardWidth = 640;
     int boardHeight = 640;
 
     //images
@@ -72,7 +72,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
         addKeyListener(this);
 
         //load images
-        backgroundImg = new ImageIcon(getClass().getResource("./CIDE.jpeg")).getImage();
+        backgroundImg = new ImageIcon(getClass().getResource("./CIDE.jepg")).getImage();
         birdImg = new ImageIcon(getClass().getResource("./kirby_upscaled.png")).getImage();
         topPipeImg = new ImageIcon(getClass().getResource("./toppipe.png")).getImage();
         bottomPipeImg = new ImageIcon(getClass().getResource("./bottompipe.png")).getImage();
