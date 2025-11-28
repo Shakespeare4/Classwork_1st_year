@@ -15,7 +15,7 @@ public class App {
         while (c< input.length()){
         if(input.charAt(c)=='('){
             compare++;
-        }else if(input.charAt(c)==')'){
+        }else if(input.charAt(c)==')'&& compare > 0){
             compare--;
         }
         
