@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Introduzca el nombre del heroe de nuestra historia: ");
         nomHeroi = sc.nextLine();// pedimos el nombre del heroe
         System.out.println();
-        Guybrush = new Heroi(nomHeroi);
+        //Guybrush = new Heroi(nomHeroi);
         Guybrush.setnomheroi(nomHeroi);// le asignamos el nombre
         nomIlla = carib.getnomIlla();// pedimos el nombre de la isla
         illaLongitud = carib.getLongitudIlla();// pedimos la longitud de la isla

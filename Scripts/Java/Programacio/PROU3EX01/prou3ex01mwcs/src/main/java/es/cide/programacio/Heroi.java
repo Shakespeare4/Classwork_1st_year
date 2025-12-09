@@ -2,10 +2,9 @@ package es.cide.programacio;
 
 import java.util.Scanner;//importamos la clase Scanner
 
-public class Heroi {
+public abstract class Heroi extends Personatge implements Fight, Speak{
     // atributos
     private Scanner sc = new Scanner(System.in);
-    private String nom;
     private boolean hViu;
     private int  resposta, vida;
     private String[] opcionsResposta = { // creamos un array con las posibles respuestas
@@ -21,10 +20,10 @@ public class Heroi {
     };
 
     // constructor
-    public Heroi(String nouNom) {
-        this.vida = 10;// inicializamos la vida como 10
+    public Heroi(String nouNom, int novaVida) {
+        super(nouNom, novaVida);
         this.hViu = true;// inicializamos el estado como vivo
-        this.nom = nouNom; // inicializamos el nombre como el introducido
+
     }
 
     // getters
@@ -40,7 +39,7 @@ public class Heroi {
 
     // metodes
 
-    public String defensar() {// para imprimir las opciones y devolver el resultado
+    public void defensar() {// para imprimir las opciones y devolver el resultado
 
         System.out.println("1 " + opcionsResposta[0]);
         System.out.println("2 " + opcionsResposta[1]);
@@ -53,7 +52,7 @@ public class Heroi {
         System.out.println("9 " + opcionsResposta[8]);
         System.out.println();
         this.resposta = sc.nextInt();// pedimos la respuesta
-        return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
+        //return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
     }
 
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
@@ -64,5 +63,15 @@ public class Heroi {
             this.hViu = false;
         }
         return hViu;
+    }
+    public void sayHello(){
+
+    }
+    
+    public void sayGoodBye(){
+
+    }
+    public void insultar(){
+
     }
 }

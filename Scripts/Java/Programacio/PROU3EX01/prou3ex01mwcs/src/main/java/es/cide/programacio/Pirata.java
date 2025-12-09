@@ -2,12 +2,12 @@ package es.cide.programacio;
 
 import java.util.Random;//importamos la clase Random
 
-public class Pirata {
+public abstract class Pirata extends Personatge implements Speak, Fight {
     private Random ra = new Random();// inicializamos el random
-    private String nom;
+    protected String nom;
     private String[] insults;
     private boolean pViu;
-    private int insultOriginal1, insultOriginal2, insultOriginal3, posicioOriginal, posInsult, vida, nomAleatori;
+    protected int insultOriginal1, insultOriginal2, insultOriginal3, posicioOriginal, posInsult, vida, nomAleatori;
     private String[] opcionsInsult = { // creamos un array con las posibles insultos
             "¡Eres tan repulsivo como un mono en lencería!",
             "¡Luchas como un granjero!",
@@ -41,16 +41,11 @@ public class Pirata {
             "Jacobo Gorrión",
             "Gato Pirata"
     };
-    boolean[] nomUsat = new boolean[9];//Creamos un array booleano para guardar si el nombre se ha utilizado 
+
     boolean[] insultUsat = new boolean[3];
     // constructor
-    public Pirata() {
-        do{
-        nomAleatori = ra.nextInt(opcionsNomPirata.length);
-        this.nom = opcionsNomPirata[nomAleatori];// asignamos el valor del parametro al atributo nombre
-        nomUsat[nomAleatori] = true;
-        }while(!nomUsat[nomAleatori]);
-        nomUsat[nomAleatori] = true;
+    public Pirata(String nouNom, int novaVida) {
+        super(nouNom, novaVida);
         insults = new String[3];// inicializamos el array de insultos
         vida = ra.nextInt(1, 3);// inicializamos la vida con un valor aleatorio entre 1 y 3
         pViu = true;// inicializamos el estado como vivo
@@ -81,7 +76,7 @@ public class Pirata {
     }
 
     // metodes
-    public String insultar() {//para devolver un insulto aleatorio y guardar su posicion original
+    public void insultar() {//para devolver un insulto aleatorio y guardar su posicion original
         do{
         posInsult = ra.nextInt(3);
         insultUsat[posInsult] = true;
@@ -94,7 +89,7 @@ public class Pirata {
         } else if (insults[posInsult] == opcionsInsult[insultOriginal3]) {
             posicioOriginal = insultOriginal3;
         }
-        return insults[posInsult];
+        //return insults[posInsult];
 
     }
 
@@ -113,4 +108,15 @@ public class Pirata {
         return pViu;
     }
 
+    public void sayHello(){
+
+    }
+    
+    public void sayGoodBye(){
+
+    }
+    
+    public void defensar(){
+
+    }
 }
