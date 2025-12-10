@@ -5,9 +5,9 @@ import java.util.Scanner;//importamos la clase Scanner
 public abstract class Heroi extends Personatge implements Fight, Speak{
     // atributos
     private Scanner sc = new Scanner(System.in);
-    private boolean hViu;
-    private int  resposta, vida;
-    private String[] opcionsResposta = { // creamos un array con las posibles respuestas
+    protected boolean hViu;
+    protected int  resposta, vida;
+    protected String[] opcionsResposta = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
             "¡Suerte que tú peleas como una vaca!",
             "¡Me alegra que fueras a tu reunión familiar!",
@@ -39,31 +39,7 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
 
     // metodes
 
-    public void defensar() {// para imprimir las opciones y devolver el resultado
-
-        System.out.println("1 " + opcionsResposta[0]);
-        System.out.println("2 " + opcionsResposta[1]);
-        System.out.println("3 " + opcionsResposta[2]);
-        System.out.println("4 " + opcionsResposta[3]);
-        System.out.println("5 " + opcionsResposta[4]);
-        System.out.println("6 " + opcionsResposta[5]);
-        System.out.println("7 " + opcionsResposta[6]);
-        System.out.println("8 " + opcionsResposta[7]);
-        System.out.println("9 " + opcionsResposta[8]);
-        System.out.println();
-        this.resposta = sc.nextInt();// pedimos la respuesta
-        //return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
-    }
-
-    public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
-        this.vida--;
-        if (vida > 0) {
-            this.hViu = true;
-        } else {
-            this.hViu = false;
-        }
-        return hViu;
-    }
+    
     public void sayHello(){
 
     }
@@ -74,4 +50,5 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
     public void insultar(){
 
     }
+
 }

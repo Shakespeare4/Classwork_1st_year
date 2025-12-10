@@ -40,5 +40,29 @@ private String[] opcionsInsult = { // creamos un array con las posibles insultos
     public int getVidaLechuck(){
         return vida;
     }
-    
+    public boolean vida() {// para restar vida al pirata y comprobar si sigue vivo
+        this.vida--;
+        if (vida != 0) {
+            this.pViu = true;
+        } else {
+            this.pViu = false;
+        }
+        return pViu;
+    }
+    public void insultar() {//para devolver un insulto aleatorio y guardar su posicion original
+        do{
+        posInsult = ra.nextInt(3);
+        insultUsat[posInsult] = true;
+        }while(!insultUsat[posInsult]);
+        
+        if (insults[posInsult] == opcionsInsult[insultOriginal1]) {
+            posicioOriginal = insultOriginal1;
+        } else if (insults[posInsult] == opcionsInsult[insultOriginal2]) {
+            posicioOriginal = insultOriginal2;
+        } else if (insults[posInsult] == opcionsInsult[insultOriginal3]) {
+            posicioOriginal = insultOriginal3;
+        }
+        //return insults[posInsult];
+
+    }
 }
