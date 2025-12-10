@@ -60,14 +60,17 @@ public class PirataNormal extends Pirata{
         insultUsat[posInsult] = true;
         }while(!insultUsat[posInsult]);
         
-        if (insults[posInsult] == opcionsInsult[insultOriginal1]) {
+        if (insultsElegits[posInsult] == opcionsInsult[insultOriginal1]) {
             posicioOriginal = insultOriginal1;
-        } else if (insults[posInsult] == opcionsInsult[insultOriginal2]) {
+        } else if (insultsElegits[posInsult] == opcionsInsult[insultOriginal2]) {
             posicioOriginal = insultOriginal2;
-        } else if (insults[posInsult] == opcionsInsult[insultOriginal3]) {
+        } else if (insultsElegits[posInsult] == opcionsInsult[insultOriginal3]) {
             posicioOriginal = insultOriginal3;
         }
-        //return insults[posInsult];
+        
+        System.out.println(insultsElegits[posInsult]);
+        
+        
 
     }
 
@@ -84,5 +87,12 @@ public class PirataNormal extends Pirata{
             this.pViu = false;
         }
         return pViu;
+    }
+    public void sayHello(){
+        System.out.println("Te voy a tocar");
+    }
+    
+    public void sayGoodBye(){
+        System.out.println("Me han tocado");
     }
 }

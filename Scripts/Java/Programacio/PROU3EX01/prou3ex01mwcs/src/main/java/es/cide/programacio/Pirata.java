@@ -28,7 +28,7 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
     public String getnomPirata() {// para pedir el nombre del pirata
         return this.nom;
     }
-
+    public abstract boolean replica(String response);
 
 
     public void sayHello(){

@@ -7,6 +7,7 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
     private Scanner sc = new Scanner(System.in);
     protected boolean hViu;
     protected int  resposta, vida;
+    protected String respostaString;
     protected String[] opcionsResposta = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
             "¡Suerte que tú peleas como una vaca!",
@@ -31,7 +32,13 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
     public boolean getestatheroi() {// para pedir el estado del heroe
         return hViu;
     }
+    public String getRespostaHeroi(){
+        return this.respostaString;
+    }
 
+    public String getNomHeroi(){
+        return this.nom;
+    }
     // setters
     public void setnomheroi(String newnom) {// para cambiar el nombre del heroe
         this.nom = newnom;

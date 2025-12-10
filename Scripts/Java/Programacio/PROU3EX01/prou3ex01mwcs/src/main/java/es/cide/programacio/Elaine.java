@@ -33,7 +33,7 @@ public class Elaine extends Heroi {
         System.out.println("8 " + opcionsResposta[7]);
         System.out.println();
         this.resposta = sc.nextInt();// pedimos la respuesta
-        //return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
+        // pasamos el valor correspondiente del array
     }
 
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo

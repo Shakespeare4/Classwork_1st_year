@@ -22,12 +22,12 @@ public class Illa {
         this.illa = new Pirata[ra.nextInt(2, 8)];// inicializamos el tamaño de la isla
         this.longIlla = illa.length;// guardamos la longitud del array en una variable
         this.nom = nameOptionsIlla[ra.nextInt(4)];// elegimos un nombre aleatorio de nuestras pciones
-        for (int i = 0; i < longIlla-1; i++) {// llenamos cada posición del aray illa con un pirata nuevo
+        for (int i = 1; i < longIlla; i++) {// llenamos cada posición del aray illa con un pirata nuevo
             pirataIntroduit = new PirataNormal("Ricardo", 10);// cada pirata tiene un nombre aleatorio
             illa[i] = pirataIntroduit;
         }
         pirataIntroduit = new LeChuck("Pirata Lechuck", 20);
-        illa[longIlla] = pirataIntroduit;
+        illa[0] = pirataIntroduit;
     }
 
     // getters

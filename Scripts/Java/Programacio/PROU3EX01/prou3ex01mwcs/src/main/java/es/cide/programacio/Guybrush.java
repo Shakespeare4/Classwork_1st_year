@@ -49,7 +49,8 @@ public class Guybrush extends Heroi {
         System.out.println("4 " + respostes[3]);
         System.out.println();
         this.resposta = sc.nextInt();// pedimos la respuesta
-        //return opcionsResposta[resposta - 1];// pasamos el valor correspondiente del array
+        this.respostaString = respostes[this.resposta-1];
+        
     }
     @Override
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo

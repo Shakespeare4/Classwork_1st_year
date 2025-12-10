@@ -12,8 +12,18 @@ private String[] opcionsInsult = { // creamos un array con las posibles insultos
             "¡Nunca había visto un espadachín tan torpe!",
             "¡Mis hazañas son cantadas por todo el Caribe!",
             "¡Te dejaré devastado, mutilado y perforado!",
-            "¡En mi última batalla acabé lleno de sangre!"
     };
+    
+private String[] opcionsResposta = {
+            "¡Entonces matarte a tí será fungicidio justificado!",
+            "¡Si no cuentas todos con los que has salido!",
+            "Contigo aquí ¡Quiero ser fumigado!",
+            "¿Esa es tu cara? Pensaba que era tu trasero...",
+            "¡Al menos la mía saben cual es!",
+            "¡Si dejaras de huir tanto, lo verías!",
+            "¡Una pena que sean inventadas!",
+            "¡Tu olor ya me tiene!"
+};
 
     private String[] insultsElegits = new String[3];
     public LeChuck(String nom, int vida){
@@ -63,6 +73,16 @@ private String[] opcionsInsult = { // creamos un array con las posibles insultos
             posicioOriginal = insultOriginal3;
         }
         //return insults[posInsult];
+    }
+    public void sayHello(){
+        System.out.println("Soy LeChuck y te voy a tocar");
+    }
+    
+    public void sayGoodBye(){
+        System.out.println("Soy LeChuck y me han tocado");
+    }
+        public boolean replica(String response) {// para comprobar si la respuesta del heroe es correcta
+        return response.equals(opcionsResposta[posicioOriginal]);
 
     }
 }
