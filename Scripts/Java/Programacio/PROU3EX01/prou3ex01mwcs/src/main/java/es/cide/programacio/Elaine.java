@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Elaine extends Heroi {
     Random ra = new Random();
     Scanner sc = new Scanner(System.in);
+    
     public Elaine(String nom, int vida){
         super(nom, vida);
     }
@@ -33,6 +34,7 @@ public class Elaine extends Heroi {
         System.out.println("8 " + opcionsResposta[7]);
         System.out.println();
         this.resposta = sc.nextInt();// pedimos la respuesta
+        this.respostaString = opcionsResposta[this.resposta-1];
         // pasamos el valor correspondiente del array
     }
 

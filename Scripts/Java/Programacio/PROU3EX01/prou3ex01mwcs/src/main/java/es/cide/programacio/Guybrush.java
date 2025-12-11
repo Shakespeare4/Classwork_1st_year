@@ -55,7 +55,7 @@ public class Guybrush extends Heroi {
     @Override
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
         this.vida-=2;
-        if (vida > 0) {
+        if (this.vida > 0) {
             this.hViu = true;
         } else {
             this.hViu = false;
