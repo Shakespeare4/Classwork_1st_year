@@ -6,8 +6,11 @@ public class Guybrush extends Heroi {
     private int respostaOriginal1, respostaOriginal2, respostaOriginal3, respostaOriginal4;
     Random ra = new Random();
     Scanner sc = new Scanner(System.in);
-    public Guybrush(String nom, int vida){
-        super(nom, vida);
+    public Guybrush(String nomG, int vidaG){
+        super(nomG, vidaG);
+        this.nom = nomG;
+        this.vida = vidaG;
+        this.hViu = true;
         do {
             respostaOriginal1 = ra.nextInt(8);
             respostaOriginal2 = ra.nextInt(8);

@@ -5,9 +5,9 @@ public abstract class Personatge {
     protected String nom;
     protected int vida;
 
-    public Personatge(String nom, int vida) {
-        this.nom = nom;
-        this.vida = vida;
+    public Personatge(String nomP, int vidaP) {
+        this.nom = nomP;
+        this.vida = vidaP;
     }
 
     public abstract boolean vida();

@@ -7,6 +7,8 @@ public class Elaine extends Heroi {
     
     public Elaine(String nom, int vida){
         super(nom, vida);
+        this.nom = nom;
+        this.vida = vida;
     }
 
 

@@ -17,12 +17,11 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
             "¡Te debió enseñar todo lo que sabes!",
             "¿Por que, quieres que te preste uno?",
             "Si las hay, solo que nunca las aprendiste.",
-            "¡Tu me haces pensar que alguien ya lo hizo!"
     };
 
     // constructor
-    public Heroi(String nouNom, int novaVida) {
-        super(nouNom, novaVida);
+    public Heroi(String nomH, int vidaH) {
+        super(nomH, vidaH);
         this.hViu = true;// inicializamos el estado como vivo
 
     }

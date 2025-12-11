@@ -13,6 +13,8 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
     // constructor
     public Pirata(String nouNom, int novaVida) {
         super(nouNom, novaVida);
+        this.nom = nouNom;
+        this.vida = novaVida;
         insults = new String[3];// inicializamos el array de insultos
         vida = ra.nextInt(1, 3);// inicializamos la vida con un valor aleatorio entre 1 y 3
         pViu = true;// inicializamos el estado como vivo

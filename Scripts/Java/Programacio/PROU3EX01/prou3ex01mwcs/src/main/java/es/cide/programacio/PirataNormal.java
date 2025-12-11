@@ -11,7 +11,6 @@ public class PirataNormal extends Pirata{
             "¡Tenía un perro más inteligente que tu!",
             "¿Ya has dejado de llevar pañales?",
             "No hay palabras para lo aqueroso que eres.",
-            "¡Me haces querer vomitar!"
     };
     private String[] opcionsResposta = { // creamos un array con las posibles respuestas
             "¿Tanto me parezco a tu prometida?",
@@ -22,30 +21,21 @@ public class PirataNormal extends Pirata{
             "¡Te debió enseñar todo lo que sabes!",
             "¿Por que, quieres que te preste uno?",
             "Si las hay, solo que nunca las aprendiste.",
-            "¡Tu me haces pensar que alguien ya lo hizo!"
     };
-        private String[] opcionsNomPirata = { // creamos un array con los posibles nombres de pirata
-            "John pirata",
-            "Largo LaGrande",
-            "Jerry el Gallego",
-            "Antonio Matapulpos",
-            "Eustaquio el iluminado",
-            "LeChuck",
-            "Oriol el bufagaites",
-            "Jacobo Gorrión",
-            "Gato Pirata"
-    };
+
     private String[] insultsElegits = new String[3];
 
     public PirataNormal(String nom, int vida){
         super(nom, vida);
+        this.nom = nom;
+        this.pViu = true;
         do {/*
              * aseguramos que los 3 insultos elegidos sean diferentes y guardamos su
              * posicion original en el array insultOptions
              */
-            insultOriginal1 = ra.nextInt(9);
-            insultOriginal2 = ra.nextInt(9);
-            insultOriginal3 = ra.nextInt(9);
+            insultOriginal1 = ra.nextInt(8);
+            insultOriginal2 = ra.nextInt(8);
+            insultOriginal3 = ra.nextInt(8);
         } while (this.insultOriginal1 == (this.insultOriginal2)
                 || this.insultOriginal1 == (this.insultOriginal3)
                 || this.insultOriginal2 == (this.insultOriginal3));

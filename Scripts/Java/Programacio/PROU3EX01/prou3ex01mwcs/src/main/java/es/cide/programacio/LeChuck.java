@@ -32,9 +32,9 @@ private String[] opcionsResposta = {
              * aseguramos que los 3 insultos elegidos sean diferentes y guardamos su
              * posicion original en el array insultOptions
              */
-            insultOriginal1 = ra.nextInt(9);
-            insultOriginal2 = ra.nextInt(9);
-            insultOriginal3 = ra.nextInt(9);
+            insultOriginal1 = ra.nextInt(8);
+            insultOriginal2 = ra.nextInt(8);
+            insultOriginal3 = ra.nextInt(8);
         } while (this.insultOriginal1 == (this.insultOriginal2)
                 || this.insultOriginal1 == (this.insultOriginal3)
                 || this.insultOriginal2 == (this.insultOriginal3));

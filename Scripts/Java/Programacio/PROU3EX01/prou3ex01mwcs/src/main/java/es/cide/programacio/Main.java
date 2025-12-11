@@ -33,7 +33,7 @@ public class Main {
         
         //Comienza el juego
         while (h.getestatheroi() && illaLongitud > 0) {// mientras el heroe este vivo y la isla tenga piratas 
-            pirataRonda = carib.vullUnPirata(carib.getLongitudIlla() - 1);// pedimos un pirata del final del array de illa
+            pirataRonda = carib.vullUnPirata(illaLongitud - 1);// pedimos un pirata del final del array de illa
             pirataRonda.sayHello();
             // Comienza la ronda
             while (h.getestatheroi() && pirataRonda.getestatpirata()) {// mientras el heroe y el pirata de la ronda esten vivos

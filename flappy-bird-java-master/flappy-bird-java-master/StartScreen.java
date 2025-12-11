@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 public class StartScreen extends JPanel implements MouseListener {
     private boolean active = false;
     private Rectangle startButton;
+    private boolean isPressed;
 
 
     public boolean getGameState(){
@@ -17,6 +18,10 @@ public class StartScreen extends JPanel implements MouseListener {
     public StartScreen(){
         startButton = new Rectangle(10,10,10,10);
     };
+
+    public boolean getButtonState(){
+        return isPressed;
+    }
     @Override
     public void mouseClicked(MouseEvent e) {
         // TODO Auto-generated method stub
