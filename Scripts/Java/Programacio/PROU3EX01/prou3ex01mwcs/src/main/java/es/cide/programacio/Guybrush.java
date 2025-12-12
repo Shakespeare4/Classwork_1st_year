@@ -12,10 +12,10 @@ public class Guybrush extends Heroi {
         this.vida = vidaG;
         this.hViu = true;
         do {
-            respostaOriginal1 = ra.nextInt(8);
-            respostaOriginal2 = ra.nextInt(8);
-            respostaOriginal3 = ra.nextInt(8);
-            respostaOriginal4 = ra.nextInt(8);
+            respostaOriginal1 = ra.nextInt(9);
+            respostaOriginal2 = ra.nextInt(9);
+            respostaOriginal3 = ra.nextInt(9);
+            respostaOriginal4 = ra.nextInt(9);
         } while (this.respostaOriginal1 == (this.respostaOriginal2)
                 || this.respostaOriginal1 == (this.respostaOriginal3)
                 || this.respostaOriginal2 == (this.respostaOriginal3)

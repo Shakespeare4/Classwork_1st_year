@@ -1,10 +1,8 @@
 package es.cide.programacio;
 
-import java.util.Scanner;//importamos la clase Scanner
 
 public abstract class Heroi extends Personatge implements Fight, Speak{
     // atributos
-    private Scanner sc = new Scanner(System.in);
     protected boolean hViu;
     protected int  resposta, vida;
     protected String respostaString;
@@ -17,6 +15,7 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
             "¡Te debió enseñar todo lo que sabes!",
             "¿Por que, quieres que te preste uno?",
             "Si las hay, solo que nunca las aprendiste.",
+            "¡Al menos la mía saben cual es!"
     };
 
     // constructor
@@ -57,4 +56,5 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
 
     }
 
+    
 }

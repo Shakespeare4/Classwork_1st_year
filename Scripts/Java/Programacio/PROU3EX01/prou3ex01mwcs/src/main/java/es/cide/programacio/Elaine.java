@@ -34,6 +34,7 @@ public class Elaine extends Heroi {
         System.out.println("6 " + opcionsResposta[5]);
         System.out.println("7 " + opcionsResposta[6]);
         System.out.println("8 " + opcionsResposta[7]);
+        System.out.println("9 " + opcionsResposta[8]);
         System.out.println();
         this.resposta = sc.nextInt();// pedimos la respuesta
         this.respostaString = opcionsResposta[this.resposta-1];
