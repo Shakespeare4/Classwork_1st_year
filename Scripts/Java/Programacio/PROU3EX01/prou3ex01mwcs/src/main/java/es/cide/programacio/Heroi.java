@@ -1,8 +1,10 @@
 package es.cide.programacio;
+import java.util.Scanner;
 
 
 public abstract class Heroi extends Personatge implements Fight, Speak{
     // atributos
+    Scanner sc = new Scanner(System.in);
     protected boolean hViu;
     protected int  resposta, vida;
     protected String respostaString;
@@ -43,7 +45,14 @@ public abstract class Heroi extends Personatge implements Fight, Speak{
     }
 
     // metodes
-
+public void defensar() {// para imprimir las opciones y devolver el resultado
+        for (int i = 0; i<opcionsResposta.length;i++){
+            System.out.println(opcionsResposta[i]);
+        }
+        this.resposta = sc.nextInt();// pedimos la respuesta
+        this.respostaString = opcionsResposta[this.resposta-1];
+        // pasamos el valor correspondiente del array
+    }
     
     public void sayHello(){
 

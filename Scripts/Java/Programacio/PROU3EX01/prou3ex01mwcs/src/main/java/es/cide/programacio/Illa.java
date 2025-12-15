@@ -36,7 +36,7 @@ public class Illa {
             pirataIntroduit = new PirataNormal(opcionsNomPirata[ra.nextInt(7)], ra.nextInt(1,3));// cada pirata tiene un nombre aleatorio
             illa[i] = pirataIntroduit;
         }
-        pirataIntroduit = new LeChuck("Pirata Lechuck", ra.nextInt(2,6));
+        pirataIntroduit = new LeChuck("Pirata Lechuck", ra.nextInt(1,3));
         illa[0] = pirataIntroduit;
     }
 

@@ -12,6 +12,8 @@ public class PirataNormal extends Pirata{
         this.pViu = true;
         
         insultOriginal1 = ra.nextInt(8);
+        insultOriginal2 = ra.nextInt(8);
+        insultOriginal3 = ra.nextInt(8);
         while (insultOriginal1 == insultOriginal2){
         insultOriginal2 = ra.nextInt(8);
         }

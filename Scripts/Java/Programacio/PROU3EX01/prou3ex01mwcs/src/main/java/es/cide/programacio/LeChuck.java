@@ -6,6 +6,7 @@ public class LeChuck extends Pirata {
     private String[] insultsElegits = new String[4];
     public LeChuck(String nom, int vida){
         super(nom, vida);
+        this.vida = vida*2;
         insultOriginal1 = ra.nextInt(8);
         while (insultOriginal1 == insultOriginal2){
         insultOriginal2 = ra.nextInt(8);

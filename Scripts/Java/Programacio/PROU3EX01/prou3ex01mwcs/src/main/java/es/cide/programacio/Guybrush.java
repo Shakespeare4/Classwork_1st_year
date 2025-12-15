@@ -1,11 +1,10 @@
 package es.cide.programacio;
 import java.util.Random;
-import java.util.Scanner;
+
 public class Guybrush extends Heroi {
     private String[] respostes = new String[4];
     private int respostaOriginal1, respostaOriginal2, respostaOriginal3, respostaOriginal4;
     Random ra = new Random();
-    Scanner sc = new Scanner(System.in);
     public Guybrush(String nomG, int vidaG){
         super(nomG, vidaG);
         this.nom = nomG;
@@ -43,18 +42,8 @@ public class Guybrush extends Heroi {
     public void insultar(){
 
     }
-    @Override
-    public void defensar() {// para imprimir las opciones y devolver el resultado
 
-        System.out.println("1 " + respostes[0]);
-        System.out.println("2 " + respostes[1]);
-        System.out.println("3 " + respostes[2]);
-        System.out.println("4 " + respostes[3]);
-        System.out.println();
-        this.resposta = sc.nextInt();// pedimos la respuesta
-        this.respostaString = respostes[this.resposta-1];
-        
-    }
+
     @Override
     public boolean vida() {// para restar vida al heroe y comprobar si sigue vivo
         this.vida-=2;
