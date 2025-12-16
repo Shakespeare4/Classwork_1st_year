@@ -2,11 +2,10 @@ package es.cide.programacio;
 import java.util.Random;
 public class LeChuck extends Pirata {
     Random ra = new Random();
-    private boolean unique;
-    private String[] insultsElegits = new String[4];
+
     public LeChuck(String nom, int vida){
         super(nom, vida);
-        this.vida = vida*2;
+        this.insultsElegits = new String[4];
         insultOriginal1 = ra.nextInt(8);
         while (insultOriginal1 == insultOriginal2){
         insultOriginal2 = ra.nextInt(8);
@@ -37,27 +36,8 @@ public class LeChuck extends Pirata {
         }
         return pViu;
     }
-    public void insultar() {//para devolver un insulto aleatorio y guardar su posicion original
-        do{
-        posInsult = ra.nextInt(4);
-        insultUsat[posInsult] = true;
-        }while(!insultUsat[posInsult]);
-        
-        if (insults[posInsult] == opcionsInsult[insultOriginal1]) {
-            posicioOriginal = insultOriginal1;
-        } else if (insults[posInsult] == opcionsInsult[insultOriginal2]) {
-            posicioOriginal = insultOriginal2;
-        } else if (insults[posInsult] == opcionsInsult[insultOriginal3]) {
-            posicioOriginal = insultOriginal3;
-        }
-            
-        if (insults[posInsult].equals("¡Eres una desgracia para tu especie!")) {
-            unique = true;
-        }
-        System.out.println( insults[posInsult]);
-    }
     public void sayHello(){
-        System.out.println("Soy LeChuck, el temible capitán fantasma");
+        System.out.println("¡Soy LeChuck, el temible capitán fantasma!");
     }
     
     public void sayGoodBye(){

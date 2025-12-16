@@ -6,7 +6,9 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
     private Random ra = new Random();// inicializamos el random
     protected String nom;
     protected String[] insults;
+    protected String[] insultsElegits;
     protected boolean pViu;
+    protected boolean unique;
     protected int insultOriginal1, insultOriginal2, insultOriginal3, posicioOriginal, posInsult, vida, nomAleatori;
     protected String[] opcionsInsult = { // creamos un array con las posibles insultos
     "¡Eres tan repulsivo como un mono en lencería!",
@@ -28,7 +30,6 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
     "¿Por que, quieres que te preste uno?",
     "Si las hay, solo que nunca las aprendiste.",
     };
-    protected boolean[] insultUsat = new boolean[3];
     // constructor
     public Pirata(String nouNom, int novaVida) {
         super(nouNom, novaVida);
@@ -48,6 +49,21 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
 
     public String getnomPirata() {// para pedir el nombre del pirata
         return this.nom;
+    }
+
+        public void insultar() {//para devolver un insulto aleatorio y guardar su posicion original
+        posInsult = ra.nextInt(insultsElegits.length-1);
+        if (insultsElegits[posInsult].equals(opcionsInsult[insultOriginal1])) {
+            posicioOriginal = insultOriginal1;
+        } else if (insultsElegits[posInsult].equals(opcionsInsult[insultOriginal2])) {
+            posicioOriginal = insultOriginal2;
+        } else if (insultsElegits[posInsult].equals(opcionsInsult[insultOriginal3])) {
+            posicioOriginal = insultOriginal3;
+        }else if(posInsult == 4){
+            unique = true;
+        }
+        System.out.println(insultsElegits[posInsult]);
+
     }
     public abstract boolean replica(String response);
 
