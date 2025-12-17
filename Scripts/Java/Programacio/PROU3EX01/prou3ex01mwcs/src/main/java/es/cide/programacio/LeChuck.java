@@ -38,10 +38,12 @@ public class LeChuck extends Pirata {
     }
     public void sayHello(){
         System.out.println("¡Soy LeChuck, el temible capitán fantasma!");
+        System.out.println();
     }
     
     public void sayGoodBye(){
         System.out.println("¡No has visto lo último de mí!");
+        System.out.println();
     }
         public boolean replica(String response) {// para comprobar si la respuesta del heroe es correcta
         if(response.equals(opcionsResposta[posicioOriginal])){

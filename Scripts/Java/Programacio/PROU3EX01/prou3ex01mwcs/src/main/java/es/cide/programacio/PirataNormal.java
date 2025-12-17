@@ -40,9 +40,11 @@ public class PirataNormal extends Pirata{
     }
     public void sayHello(){
         System.out.println("¿Te crees madera de pirata? ¡Porque no desenvainas y lo comprobamos!");
+        System.out.println();
     }
     
     public void sayGoodBye(){
         System.out.println("¡Vaya, No te gano ni con ventaja!");
+        System.out.println();
     }
 }

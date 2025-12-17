@@ -63,6 +63,7 @@ public abstract class Pirata extends Personatge implements Speak, Fight {
             unique = true;
         }
         System.out.println(insultsElegits[posInsult]);
+        System.out.println();
 
     }
     public abstract boolean replica(String response);

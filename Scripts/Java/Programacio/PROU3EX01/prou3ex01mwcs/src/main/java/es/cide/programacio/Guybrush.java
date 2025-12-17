@@ -29,18 +29,21 @@ public class Guybrush extends Heroi {
 
         }
         for (int i = 0; i<respostes.length;i++){
-            System.out.println(respostes[i]);
+            System.out.println((i+1)+" "+respostes[i]);
         }
         this.resposta = sc.nextInt();// pedimos la respuesta
+        System.out.println();
         this.respostaString = respostes[this.resposta-1];
         // pasamos el valor correspondiente del array
     }
     public void sayHello(){
         System.out.println("¡Soy Guybrush Threepwood, gran pirata!™");
+        System.out.println();
     }
     
     public void sayGoodBye(){
         System.out.println("¡Eso es todo amigos!");
+        System.out.println();
 
     }
     public void insultar(){
